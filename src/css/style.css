@@ -4,6 +4,10 @@
     overflow: hidden;
 }
 
+a:visited {
+    color:#ff00f5;
+}
+
 /* Style the links inside the navigation bar */
 .topnav .navlink {
     color: #f2f2f2;
