@@ -169,7 +169,7 @@ body {
 address{
   background-color:#404040;
   width: 66%;
-  padding-left:400px;
+  padding-left:600px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
