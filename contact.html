@@ -4,15 +4,16 @@
     <title>Mathew Tomberlin - Game Developer</title>
     <link rel="stylesheet" href="src/css/style.css">
     <script src="imagegallery.js"></script>
+    <script src="src/jquery/jquery.js"></script>
+    <script>
+    $(document).ready(function () {
+        $("#navbar").load("navbar.html", function() {
+            $("#projects").addClass("active");
+        });
+    });
+    </script>
 </head>
 <body>
-    <div class="topnav">
-        <div class="titletext">Mathew Tomberlin</div>
-        <div class="titlesubtext"><i>Game Programmer. Artist. Veteran.</i></div>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a class="active" href="#contact">Contact</a>
-    </div>
+    <div class="topnav"></div>
 </body>
 </html>
