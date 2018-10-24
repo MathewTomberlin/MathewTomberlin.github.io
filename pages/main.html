@@ -28,13 +28,22 @@
         //From the ArticleName folder, load the selected page number
         $("#articlebody").load(ArticleName + '/' + PageNumber + '.html');
 
-        var nextPageButton = $('<input type="button" value="Next >" style="float:right"/>');
-        $(".pagecontrols").append(nextPageButton);
-
-        var lastPageButton = $('<input type="button" value="< Back" style="float:left"/>');
-        $(".pagecontrols").append(lastPageButton);
-
-        $(".pagecontrols").attr("align", "center");
+        $.ajax({
+            url: ArticleName + '/' + (PageNumber+1) + '.html',
+            type: 'HEAD',
+            success: function () {
+                var nextPageButton = $('<input type="button" value="Next >" style="float:right"/>');
+                $(".pagecontrols").append(nextPageButton);
+            }
+        });
+        $.ajax({
+            url: ArticleName + '/' + (PageNumber - 1) + '.html',
+            type: 'HEAD',
+            success: function () {
+                var lastPageButton = $('<input type="button" value="< Back" style="float:left"/>');
+                $(".pagecontrols").append(lastPageButton);
+            }
+        });
     });
     </script>
 </head>
