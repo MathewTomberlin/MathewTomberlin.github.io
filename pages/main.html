@@ -29,17 +29,17 @@
         $("#articlebody").load(ArticleName + '/' + PageNumber + '.html');
 
         var nextPageButton = $('<input type="button" value="Next >" style="float:right"/>');
-        $("body").append(nextPageButton);
+        $("#pagecontrols").append(nextPageButton);
 
         var lastPageButton = $('<input type="button" value="< Back" style="float:left"/>');
-        $("body").append(lastPageButton);
+        $("pagecontrols").append(lastPageButton);
     });
     </script>
 </head>
 <body>
     <div class="topnav" id="navbar"></div><br />
     <div class="articlebody" id="articlebody"></div><br />
-
+    <div class="pagecontrols" style="width:33%"></div><br/>
 
     <footer style="text-align: center; color: white;">
         <h4>&copy; 2018 Mathew Tomberlin. All rights reserved.</h4>
