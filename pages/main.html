@@ -29,10 +29,10 @@
         $("#articlebody").load(ArticleName + '/' + PageNumber + '.html');
 
         var nextPageButton = $('<input type="button" value="Next >" style="float:right"/>');
-        $("#pagecontrols").append(nextPageButton);
+        $(".pagecontrols").append(nextPageButton);
 
         var lastPageButton = $('<input type="button" value="< Back" style="float:left"/>');
-        $("pagecontrols").append(lastPageButton);
+        $(".pagecontrols").append(lastPageButton);
     });
     </script>
 </head>
