@@ -1,16 +1,24 @@
+<script>
+    var loc = window.location.pathname;
+    var dir = loc.substring(0, loc.lastIndexOf('/'));
+    function Navigate(SiteAddress) {
+        window.location.href = dir+"/" + SiteName;
+    }
+</script>
+
 <div class="titletext">Mathew Tomberlin</div>
 <div class="titlesubtext">
     <i>Programmer. Artist. Veteran.</i><br />
-    <a href="mailto:mathew.tomberlin@gmail.com" target="_blank" style="padding-right:10px;"><img src="images/emailicon.png" style="width:30px;height:35px;padding-top:5px;" /></a>
-    <a href="https://docs.google.com/document/d/1mXkbbXCiTmdIer5hIxPjrsW3xnLrjckhm9Tgpik3MlQ/edit?usp=sharing" target="_blank" style="padding-right:10px;"><img src="images/resumeicon.png" style="width:30px;height:35px;padding-top:5px;" /></a>
-    <a href="https://twitter.com/CrimsonOctopus" target="_blank" style="padding-right:10px;"><img src="images/twitterbttn.png" style="width:30px;height:35px;padding-top:5px;" /></a>
-    <a href="https://github.com/MathewTomberlin" target="_blank" style="padding-right:10px;"><img src="images/giticon.png" style="width:30px;height:35px;padding-top:5px;" /></a>
-    <a href="https://www.instagram.com/crimsonoctopus/" target="_blank" style="padding-right:10px;"><img src="images/instagrambttn.png" style="width:30px;height:35px;padding-top:5px;" /></a>
-    <a href="https://www.linkedin.com/in/mathew-tomberlin-4b570aa7/" target="_blank" style="padding-right:10px;"><img src="images/linkedinbttn.png" style="width:30px;height:35px;padding-top:5px;" /></a>
+    <a href="mailto:mathew.tomberlin@gmail.com" target="_blank" style="padding-right:10px;"><img src="emailicon.png" style="width:30px;height:35px;padding-top:5px;" /></a>
+    <a href="https://docs.google.com/document/d/1mXkbbXCiTmdIer5hIxPjrsW3xnLrjckhm9Tgpik3MlQ/edit?usp=sharing" target="_blank" style="padding-right:10px;"><img src="resumeicon.png" style="width:30px;height:35px;padding-top:5px;" /></a>
+    <a href="https://twitter.com/CrimsonOctopus" target="_blank" style="padding-right:10px;"><img src="twitterbttn.png" style="width:30px;height:35px;padding-top:5px;" /></a>
+    <a href="https://github.com/MathewTomberlin" target="_blank" style="padding-right:10px;"><img src="giticon.png" style="width:30px;height:35px;padding-top:5px;" /></a>
+    <a href="https://www.instagram.com/crimsonoctopus/" target="_blank" style="padding-right:10px;"><img src="instagrambttn.png" style="width:30px;height:35px;padding-top:5px;" /></a>
+    <a href="https://www.linkedin.com/in/mathew-tomberlin-4b570aa7/" target="_blank" style="padding-right:10px;"><img src="linkedinbttn.png" style="width:30px;height:35px;padding-top:5px;" /></a>
 </div>
 
-<a href="index.html" class="navlink" id="home">Home</a>
-<a href="projects.html" class="navlink" id="projects">Projects</a>
-<a href="articles.html" class="navlink" id="articles">Articles</a>
-<a href="about.html" class="navlink" id="about">About</a>
-<a href="contact.html" class="navlink" id="contact">Contact</a>
+<a href="#" onclick="Navigate('index.html');" class="navlink" id="home">Home</a>
+<a href="#" onclick="Navigate('projects.html');" class="navlink" id="projects">Projects</a>
+<a href="#" onclick="Navigate('articles.html');" class="navlink" id="articles">Articles</a>
+<a href="#" onclick="Navigate('about.html');" class="navlink" id="about">About</a>
+<a href="#" onclick="Navigate('contact.html');" class="navlink" id="contact">Contact</a>
