@@ -29,14 +29,14 @@
         $("#articlebody").load(ArticleName + '/' + PageNumber + '.html');
 
         $.ajax({
-            url: ArticleName + '/' + (PageNumber+1) + '.html',
+            url: ArticleName + '/' + (parseInt(PageNumber)+1) + '.html',
             success: function () {
                 var nextPageButton = $('<input type="button" value="Next >" style="float:right"/>');
                 $(".pagecontrols").append(nextPageButton);
             }
         });
         $.ajax({
-            url: ArticleName + '/' + (PageNumber - 1) + '.html',
+            url: ArticleName + '/' + (parseInt(PageNumber) - 1) + '.html',
             success: function () {
                 var lastPageButton = $('<input type="button" value="< Back" style="float:left"/>');
                 $(".pagecontrols").append(lastPageButton);
