@@ -2,8 +2,9 @@
     //Get the directory name. Remove the site name. Remove the leading backslash.
     var loc = window.location.pathname;
     var dir = loc.substring(0, loc.lastIndexOf('/'));
-    dir = dir.substr(1, dir.lastIndexOf('/'));
+    //dir = dir.substr(1, dir.lastIndexOf('/'));
     //For each directory, append '../' to go up one directory.
+    console.log(dir);
     var dirStr = "";
     for (var i = 0; i < dir.length; i++) {
         if (dir[i] == '/') {
