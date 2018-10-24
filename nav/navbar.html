@@ -1,17 +1,17 @@
 <script>
-    //Get the directory name. Remove the site name. Remove the leading backslash.
+    //Get the directory and site name. Remove the site name.
     var loc = window.location.pathname;
     var dir = loc.substring(0, loc.lastIndexOf('/'));
-    //dir = dir.substr(1, dir.lastIndexOf('/'));
+
     //For each directory, append '../' to go up one directory.
-    console.log(loc);
     var dirStr = "";
     for (var i = 0; i < dir.length; i++) {
         if (dir[i] == '/') {
             dirStr += "../";
         }
     }
-    console.log(dirStr);
+
+    //Append dirStr to go up the right number of directories to the root
     $(document).ready(function () {
         $(".emailicon").attr('src', dirStr + 'images/emailicon.png');
         $(".resumeicon").attr('src', dirStr + 'images/resumeicon.png');
@@ -20,7 +20,8 @@
         $(".instaicon").attr('src', dirStr + 'images/instagrambttn.png');
         $(".linkedinicon").attr('src', dirStr + 'images/linkedinbttn.png');
     })
-    //Sites are at root folder
+
+    //Append dirStr to SiteAddresses to go up to the root folder
     function Navigate(SiteAddress) {
         window.location.href = dirStr + SiteAddress;
     }
