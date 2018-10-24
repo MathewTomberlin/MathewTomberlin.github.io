@@ -1,8 +1,19 @@
 <script>
+    //Get the directory name. Remove the site name. Remove the leading backslash.
     var loc = window.location.pathname;
     var dir = loc.substring(0, loc.lastIndexOf('/'));
+    dir = dir.substr(1, dir.lastIndexOf('/'));
+    //For each directory, append '../' to go up one directory.
+    var dirStr = "";
+    for (var i = 0; i < dir.length; i++) {
+        if (dir[i] == '/') {
+            dirStr += "../";
+        }
+    }
+
+    //Sites are at root folder
     function Navigate(SiteAddress) {
-        window.location.href = dir+"/" + SiteName;
+        window.location.href = dirStr + SiteName;
     }
 </script>
 
