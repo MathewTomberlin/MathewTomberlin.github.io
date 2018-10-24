@@ -27,6 +27,7 @@
 
         //From the ArticleName folder, load the selected page number
         $("#articlebody").load(ArticleName + '/' + PageNumber + '.html');
+        $(".articleimage").attr("src", ArticleName + '.jpg');
 
         $.ajax({
             url: ArticleName + '/' + (parseInt(PageNumber)+1) + '.html',
@@ -47,9 +48,9 @@
 </head>
 <body>
     <div class="topnav" id="navbar"></div><br />
+    <img class="articleimage" style="width:100%"/>
     <div class="articlebody" id="articlebody"></div><br />
     <div class="centerwrapper" align="center"><div class="pagecontrols" style="width:15%;display:inline-block"></div></div><br/>
-
     <footer style="text-align: center; color: white;">
         <h4>&copy; 2018 Mathew Tomberlin. All rights reserved.</h4>
     </footer>
