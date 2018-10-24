@@ -5,8 +5,12 @@
     <link rel="stylesheet" href="src/css/style.css">
     <script src="src/jquery/jquery.js"></script>
     <script>
+        function LoadArticle(ArticleName,PageNumber) {
+            window.location.href = "pages/main.html?ArticleName=" + ArticleName+"&PageNumber="+PageNumber;
+        }
+
         function LoadArticle(ArticleName) {
-            window.location.href = "pages/main.html?ArticleName=" + ArticleName;
+            window.location.href = "pages/main.html?ArticleName=" + ArticleName + "&PageNumber=1";
         }
 
         $(document).ready(function () {

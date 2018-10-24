@@ -10,10 +10,23 @@
             $("#articles").addClass("active");
         });
 
-        let searchParams = new URLSearchParams(window.location.search)
-        searchParams.has('ArticleName')
-        let param = searchParams.get('ArticleName')
-        $("#articlebody").load(param+'/'+'1.html');
+        //Get URL parameters
+        const URLParams = new URLSearchParams(window.location.search)
+
+        //Get the Article Name from the URL parameters
+        ArticleName = 'Unknown'
+        if (URLParams.has('ArticleName')) {
+            ArticleName = URLParams.get('ArticleName')
+        }
+
+        //Get the Page Number from the URL parameters
+        PageNumber = 1
+        if (URLParams.has('PageNumber')) {
+            PageNumber = URLParams.get('PageNumber')
+        }
+
+        //Get the Page Number from the URL parameters
+        $("#articlebody").load(ArticleName+'/'+PageNumber+'.html');
     });
     </script>
 </head>
