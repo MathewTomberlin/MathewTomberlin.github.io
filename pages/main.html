@@ -25,8 +25,14 @@
             PageNumber = URLParams.get('PageNumber')
         }
 
-        //Get the Page Number from the URL parameters
-        $("#articlebody").load(ArticleName+'/'+PageNumber+'.html');
+        //From the ArticleName folder, load the selected page number
+        $("#articlebody").load(ArticleName + '/' + PageNumber + '.html');
+
+        var nextPageButton = $('<input type="button" value="Next >" style="float:right"/>');
+        $("body").append(nextPageButton);
+
+        var lastPageButton = $('<input type="button" value="< Back" style="float:left"/>');
+        $("body").append(lastPageButton);
     });
     </script>
 </head>
