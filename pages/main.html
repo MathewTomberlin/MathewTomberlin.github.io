@@ -31,14 +31,14 @@
         $.ajax({
             url: ArticleName + '/' + (parseInt(PageNumber)+1) + '.html',
             success: function () {
-                var nextPageButton = $('<input type="button" value="Next >" style="float:right"/>');
+                var nextPageButton = $('<input type="button" onclick="location.href="'+ArticleName + '/' + (parseInt(PageNumber)+1) + '.html";" value="Next >" style="float:right"/>');
                 $(".pagecontrols").append(nextPageButton);
             }
         });
         $.ajax({
             url: ArticleName + '/' + (parseInt(PageNumber) - 1) + '.html',
             success: function () {
-                var lastPageButton = $('<input type="button" value="< Back" style="float:left"/>');
+                var lastPageButton = $('<input type="button" onclick="location.href="' + ArticleName + '/' + (parseInt(PageNumber) - 1) + '.html";" value="< Back" style="float:left"/>');
                 $(".pagecontrols").append(lastPageButton);
             }
         });
