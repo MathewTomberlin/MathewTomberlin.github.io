@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathew Tomberlin - Game Developer</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <script src="../src/jquery/jquery.js"></script>
+    <script>
+    $(document).ready(function () {
+        $("#navbar").load("navbar.html", function() {
+            $("#articles").addClass("active");
+        });
+        let searchParams = new URLSearchParams(window.location.search)
+        searchParams.has('ArticleName')
+        let param = searchParams.get('ArticleName')
+        $("#articlebody").load(param+'/'+'1.html');
+    });
+    </script>
+</head>
+<body>
+    <div class="topnav" id="navbar"></div><br />
+    <div class="articlebody" id="articlebody"></div><br />
+
+
+    <footer style="text-align: center; color: white;">
+        <h4>&copy; 2018 Mathew Tomberlin. All rights reserved.</h4>
+    </footer>
+    <script src="../src/js/collapsible.js"></script>
+</body>
+</html>

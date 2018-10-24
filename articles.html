@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathew Tomberlin - Game Developer</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/jquery/jquery.js"></script>
+    <script>
+        function LoadArticle(ArticleName) {
+            window.location.href = "articles/main.html?ArticleName=" + ArticleName;
+        }
+
+        $(document).ready(function () {
+            $("#navbar").load("navbar.html", function() {
+                $("#articles").addClass("active");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="topnav" id="navbar"></div><br />
+
+    <a href="#" onclick="LoadArticle('TwitchIRC');">TwitchIRC Tutorial</a>
+
+
+    <footer style="text-align: center; color: white;">
+        <h4>&copy; 2018 Mathew Tomberlin. All rights reserved.</h4>
+    </footer>
+    <script src="src/js/collapsible.js"></script>
+</body>
+</html>
