@@ -20,7 +20,8 @@
 
             var ArticleTitles = ["TwitchIRC"];
             for (var i = 0; i < ArticleTitles.length; i++) {
-                var articleDescription = $("<img src='pages/"+ArticleTitles[i]+"/"+ArticleTitles[i]+".jpg' style='float:left'/>")
+                var articleDescription = $(""+
+                    "<div style='background-color:#808080;'><img src='pages/"+ArticleTitles[i]+"/"+ArticleTitles[i]+".jpg' style='float:left;width:50px;height:auto;'/></div>")
                 $(".articleList").append(articleDescription);
             }
         });
