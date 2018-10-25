@@ -32,14 +32,14 @@
         $.ajax({
             url: ArticleName + '/' + (parseInt(PageNumber)+1) + '.html',
             success: function () {
-                var nextPageButton = $('<input type="button" onclick="location.href=\'main.html?ArticleName=' + ArticleName+'&PageNumber='+(parseInt(PageNumber)+1)+'\';" value="Next >" style="float:right"/>');
+                var nextPageButton = $('<input type="button" onclick="location.href=\'main.html?ArticleName=' + ArticleName + '&PageNumber=' + (parseInt(PageNumber) + 1) + '\';" value="Next >" style="float:right;padding:10px;border:2px solid #ccc"/>');
                 $(".pagecontrols").append(nextPageButton);
             }
         });
         $.ajax({
             url: ArticleName + '/' + (parseInt(PageNumber) - 1) + '.html',
             success: function () {
-                var lastPageButton = $('<input type="button" onclick="location.href=\'main.html?ArticleName=' + ArticleName + '&PageNumber=' + (parseInt(PageNumber) - 1) + '\';" value="< Back" style="float:left"/>');
+                var lastPageButton = $('<input type="button" onclick="location.href=\'main.html?ArticleName=' + ArticleName + '&PageNumber=' + (parseInt(PageNumber) - 1) + '\';" value="< Back" style="float:left;padding:10px;border:2px solid #ccc"/>');
                 $(".pagecontrols").append(lastPageButton);
             }
         });
@@ -48,7 +48,7 @@
 </head>
 <body>
     <div class="topnav" id="navbar"></div><br />
-    <img class="articleimage" style="width:100%;" />
+    <img class="articleimage" style="width:100%;max-height:600px;" />
     <div class="centerwrapper" align="center"><div class="pagecontrols" style="width:15%;display:inline-block"></div></div><br />
     <div class="articlebody" id="articlebody" style="background-color:#808080;"></div><br />
     <div class="centerwrapper" align="center"><div class="pagecontrols" style="width:15%;display:inline-block"></div></div><br />
