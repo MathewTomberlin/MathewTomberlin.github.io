@@ -21,7 +21,7 @@
             var ArticleTitles = ["TwitchIRC"];
             for (var i = 0; i < ArticleTitles.length; i++) {
                 var articleDescription = $(""+
-                    "<div style='background-color:#808080;'><img src='pages/"+ArticleTitles[i]+"/"+ArticleTitles[i]+".jpg' style='float:left;width:50px;height:auto;'/></div>")
+                    "<div style='background-color:#808080;'><img src='pages/"+ArticleTitles[i]+"/"+ArticleTitles[i]+".jpg' style='float:left;width:200px;height:auto;'/><a href=pages/main.html?ArticleName='" + ArticleTitles[i] + "&PageNumber=1'>"+ArticleTitles[i]+"</a></div>")
                 $(".articleList").append(articleDescription);
             }
         });
