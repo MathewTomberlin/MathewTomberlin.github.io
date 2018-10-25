@@ -32,14 +32,14 @@
         $.ajax({
             url: ArticleName + '/' + (parseInt(PageNumber)+1) + '.html',
             success: function () {
-                var nextPageButton = $('<input type="button" onclick="location.href=\'main.html?ArticleName=' + ArticleName + '&PageNumber=' + (parseInt(PageNumber) + 1) + '\';" value="Next >" style="float:right;padding:10px;border:2px solid #ccc"/>');
+                var nextPageButton = $('<input type="button" onclick="location.href=\'main.html?ArticleName=' + ArticleName + '&PageNumber=' + (parseInt(PageNumber) + 1) + '\';" value="Next >" style="float:right;padding:10px;border:2px solid #ccc;font:bold 12px arial;"/>');
                 $(".pagecontrols").append(nextPageButton);
             }
         });
         $.ajax({
             url: ArticleName + '/' + (parseInt(PageNumber) - 1) + '.html',
             success: function () {
-                var lastPageButton = $('<input type="button" onclick="location.href=\'main.html?ArticleName=' + ArticleName + '&PageNumber=' + (parseInt(PageNumber) - 1) + '\';" value="< Back" style="float:left;padding:10px;border:2px solid #ccc"/>');
+                var lastPageButton = $('<input type="button" onclick="location.href=\'main.html?ArticleName=' + ArticleName + '&PageNumber=' + (parseInt(PageNumber) - 1) + '\';" value="< Back" style="float:left;padding:10px;border:2px solid #ccc;font:bold 12px arial;"/>');
                 $(".pagecontrols").append(lastPageButton);
             }
         });
