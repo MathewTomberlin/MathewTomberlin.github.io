@@ -21,7 +21,7 @@
             var ArticleTitles = ["TwitchIRC"];
             for (var i = 0; i < ArticleTitles.length; i++) {
                 var articleDescriptionHeader = $("<div style='background-color:#808080;width:30%;'><img src='pages/"+ArticleTitles[i]+"/"+ArticleTitles[i]+".jpg' style='float:left;width:200px;height:auto;'/><a href='pages/main.html?ArticleName=" + ArticleTitles[i] + "&PageNumber=1'>"+ArticleTitles[i]+"</a>")
-                var articleDescription = $("<p class='descriptionBody' style='color:white'></p></div>")
+                var articleDescription = $("<p class='descriptionBody' style='color:white;width:50%'></p></div>")
                 $(".articleList").append(articleDescriptionHeader);
                 $(".articleList").append(articleDescription);
                 $(".descriptionBody").load("pages/" + ArticleTitles[i] + "/description.html");
