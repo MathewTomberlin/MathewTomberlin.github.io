@@ -20,8 +20,8 @@
 
             var ArticleTitles = ["TwitchIRC"];
             for (var i = 0; i < ArticleTitles.length; i++) {
-                var articleDescriptionHeader = $("<div style='padding:0px;background-color:#808080;width:33%;'><img src='pages/" + ArticleTitles[i] + "/" + ArticleTitles[i] + ".jpg' style='float:left;width:200px;height:auto;'/><a href='pages/main.html?ArticleName=" + ArticleTitles[i] + "&PageNumber=1'>" + ArticleTitles[i] + "</a>")
-                var articleDescription = $("<div class='descriptionBody' style='padding:0px;background-color:#808080;color:white;width:33%'></div></div>")
+                var articleDescriptionHeader = $("<div style='padding-left:10px;padding-right:10px;padding-bottom:0px;background-color:#808080;width:33%;'><img src='pages/" + ArticleTitles[i] + "/" + ArticleTitles[i] + ".jpg' style='float:left;width:200px;height:auto;'/><a href='pages/main.html?ArticleName=" + ArticleTitles[i] + "&PageNumber=1'>" + ArticleTitles[i] + "</a>")
+                var articleDescription = $("<div class='descriptionBody' style='padding-top:0px;padding-left:10px;padding-right:10px;background-color:#808080;color:white;width:33%'></div></div>")
                 $(".articleList").append(articleDescriptionHeader);
                 $(".articleList").append(articleDescription);
                 $(".descriptionBody").load("pages/" + ArticleTitles[i] + "/description.html");
