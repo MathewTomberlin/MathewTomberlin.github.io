@@ -20,8 +20,9 @@
 
             var ArticleTitles = ["TwitchIRC"];
             for (var i = 0; i < ArticleTitles.length; i++) {
-                var articleDescription = $(""+
-                    "<div style='background-color:#808080;'><img src='pages/"+ArticleTitles[i]+"/"+ArticleTitles[i]+".jpg' style='float:left;width:200px;height:auto;'/><a href='pages/main.html?ArticleName=" + ArticleTitles[i] + "&PageNumber=1'>"+ArticleTitles[i]+"</a></div>")
+                var articleDescriptionHeader = $("<div style='background-color:#808080;'><img src='pages/"+ArticleTitles[i]+"/"+ArticleTitles[i]+".jpg' style='float:left;width:200px;height:auto;'/><a href='pages/main.html?ArticleName=" + ArticleTitles[i] + "&PageNumber=1'>"+ArticleTitles[i]+"</a>")
+                var articleDescription = $("<p>This series discusses characteristics of Twitch IRC game mechanics and discusses techniques for implementing Twitch IRC mechanics in an Unreal Engine 4 game.</p></div>")
+                $(".articleList").append(articleDescriptionHeader);
                 $(".articleList").append(articleDescription);
             }
         });
