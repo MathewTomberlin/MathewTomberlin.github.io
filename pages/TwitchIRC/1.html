@@ -1,7 +1,42 @@
 <div class="articleheader">
-    <h1 style="color:white;">TwitchIRC: Building a Twitch Chat RPG in Unreal Engine 4</h1>
-    <span style="font:9px arial;">Published: 10/24/2018</span>
+    <h2 style="color:white;">TwitchIRC: Building a Twitch Chat RPG in Unreal Engine 4</h2>
+    <span style="font:9px arial;color:white">Published: 10/24/2018</span>
 </div>
 <div class="articletext">
-    <h4 style="color:white;">This article is under construction</h4>
+    <h3 style="color:yellow;">This is an ongoing series.</h3>
+    <p>
+        While learning to stream my game development on the popular streaming platform, Twitch, I stumbled across Twitch IRC games being run on various streams across the platform.
+        These are games with mechanics which allow a streamer's viewers to interact with the game in some way by typing in to the IRC chatroom associated with the channel. Some of these
+        games, called "Twitch Plays" games, are famous, such as <i>Twitch Plays Pokemon</i>, but many are small games that run as overlays on the stream's normal content. Each game utilizes
+        the Twitch IRC chatroom in various ways, such as <i>Twitch Plays Pokemon</i>, which simply reads the last command entered in to chat at a particular interval, often creating erratic
+        and unpredictable input as all the viewer's chat commands only effect a single player. Other games, such as <i>Stream Defense</i>, allow individual viewers to issue commands to their
+        own characters and save each viewer's data on a local machine.
+    </p>
+    <p>
+        I have a particular interest in Twitch IRC games as I see them as an alternative input which allows many players to interact with the same local game instance. My games have
+        begun exploring the idea of a strategy game in which Twitch viewers make up the units of an army, each gaining levels and equipment on their own. The streamer would have control of
+        a character in the game and the army of Twitch viewers would always be around them. Or, in the case of my game <i>FLEET:Solar Empire</i>, the player is the captain of a ship and
+        their viewers are crew members aboard the streamer's ship. The crew perform most of the important functions on the ship while the player navigates and targets enemies with weapons,
+        fighter squadrons and boarding parties.
+    </p>
+    <p>Twitch IRC allows for these types of games where a vast number of users can interact with their characters via chat commands, but it comes with some serious limitations:</p>
+    <p>
+        <b>Stream Delay:</b> Twitch has built delay in to its streaming software, which allows many viewers to stream the same content and protects streamers in multiplayer matches
+        but causes a viewer to see the result of their Twitch IRC game action a couple seconds after they enter it in to chat. This means that games must build their game mechanics knowing
+        that a user won't see the result of their action for about 3 - 5 seconds, under ideal conditions. Turn-based roleplaying games are particularly well suited to this condition, but
+        slow speed realtime roleplaying games and strategy games can be developed under these conditions as well.
+    </p>
+    <p>
+        <b>Screen Sharing:</b> Because the game relies on the Twitch stream itself, all of the data relevant for every single Twitch viewer must be displayed on screen in some form.
+        In the case of my hypothetical Twitch IRC army game, if each soldier has their own health, that must be displayed on screen in some form that a viewer can see. Considering a stream
+        tends to be lower quality and may be lower resolution than the viewer's monitor, it can be quite difficult to display information about each viewer's character on screen. Many visual
+        cues, sound effects and other means are necessary to present all the necessary information to viewers. It also often becomes necessary to limit the number of simultaneous characters.
+    </p>
+    <p>
+        <b>Idle State:</b> In my experience, it is impossible to detect exactly when a user has disconnected from the IRC chatroom. Instead, their presence must be inferred by time between
+        incoming messages or ignored entirely. We treat a user as if they have left the IRC chat if more than a certain amount of time has passed since we received a command from them. Ideally,
+        this amount of time should be greater than 30 seconds, as Twitch has a spam filter preventing the same message (or game command in our case) from being entered to quickly. This means that
+        there is a high chance of characters being left idle as the game waits to determine if the viewer has left. Alternatively, the game mechanics can be designed such that an idle player still
+        operates without viewer input. This can be especially important, as viewer are more likely to come and go from games of this nature.
+    </p>
 </div>
