@@ -27,7 +27,7 @@
 
         //From the ArticleName folder, load the selected page number
         $("#articlebody").load(ArticleName + '/' + PageNumber + '.html');
-        $(".articleimage").attr("src", ArticleName + '.jpg');
+        $(".articleimage").attr("src", ArticleName + '/' + ArticleName + '.jpg');
 
         $.ajax({
             url: ArticleName + '/' + (parseInt(PageNumber)+1) + '.html',
