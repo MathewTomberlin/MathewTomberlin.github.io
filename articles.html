@@ -20,7 +20,7 @@
 
             var ArticleTitles = ["Welcome", "TwitchIRC"];
             for (var i = 0; i < ArticleTitles.length; i++) {
-                var articleDescriptionHeader = $("<div style='padding-bottom:0px;background-color:#808080;width:33%;'><img src='pages/" + ArticleTitles[i] + "/" + ArticleTitles[i] + ".jpg' style='float:left;width:200px;height:auto;'/><a href='pages/main.html?ArticleName=" + ArticleTitles[i] + "&PageNumber=1' style='padding-left:10px;padding-bottom:10px;font:bold 14px arial'>" + ArticleTitles[i] + "</a>")
+                var articleDescriptionHeader = $("<div style='padding-bottom:0px;background-color:#808080;width:33%;'><img src='pages/" + ArticleTitles[i] + "/" + ArticleTitles[i] + ".jpg' style='float:left;width:200px;height:200;'/><a href='pages/main.html?ArticleName=" + ArticleTitles[i] + "&PageNumber=1' style='padding-left:10px;padding-bottom:10px;font:bold 14px arial'>" + ArticleTitles[i] + "</a>")
                 var articleDescription = $("<div class='descriptionBody"+i+"' style='padding-top:0px;padding-left:10px;background-color:#808080;color:white;width:33%'></div></div>")
                 $(".articleList").append(articleDescriptionHeader);
                 $(".articleList").append(articleDescription);
