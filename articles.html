@@ -24,6 +24,7 @@
                 var articleDescription = $("<div class='descriptionBody' style='padding-top:0px;padding-left:10px;background-color:#808080;color:white;width:33%'></div></div>")
                 $(".articleList").append(articleDescriptionHeader);
                 $(".articleList").append(articleDescription);
+                console.log("pages/" + ArticleTitles[i] + "/description.html");
                 $(".descriptionBody").load("pages/" + ArticleTitles[i] + "/description.html");
                 $(".articleList").append($("<br/><br/>"));
             }
