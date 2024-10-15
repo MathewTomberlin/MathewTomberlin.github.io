@@ -1,100 +1,709 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133218289-1"></script>
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathew Tomberlin - Software Engineer</title>
 
-  gtag('config', 'UA-133218289-1');
-    </script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-    <title>Mathew Tomberlin - Game Developer</title>
-    <link rel="stylesheet" href="src/css/style.css">
-    <script src="src/jquery/jquery.js"></script>
-    <script>
-    $(document).ready(function () {
-        $("#navbar").load("nav/navbar.html", function () {
-            $("#home").addClass("active");
-        });
-    });
-    </script>
+  <!-- custom css link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="topnav" id="navbar"></div>
-    <div class="pagebody">
-        <!-- Container for the image gallery -->
-        <div class="container">
-            <!-- Full-width images with number text -->
-            <div align="center" class="mySlides" style="padding-top:1px;padding-bottom:1px;">
-                <div class="numbertext">1 / 6</div>
-                <img src="images/JetpackShotgun.gif">
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- #SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+
+        <div class="sidebar-info">
+            <figure class="avatar-box">
+                <img src="./assets/images/avatar.png" alt="Mathew Tomberlin">
+            </figure>
+
+            <div class="info-content">
+                <h1 class="name" title="Mathew Tomberlin">Mathew Tomberlin</h1>
+                <p class="title">Software Engineer</p>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://docs.google.com/document/d/1EmdsTu8yUYHbxUtHSgORKfvrdF0JPQ15XJriVaQsvk4/edit?usp=sharing" class="contact-link">
+                            <img src="./assets/images/resumeicon.png" alt="Resume" class="social-icon">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="mailto:mathew.tomberlin@gmail.com" class="contact-link">
+                            <img src="./assets/images/emailicon.png" alt="Resume" class="social-icon">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/mathew-tomberlin-4b570aa7/" class="contact-link">
+                            <img src="./assets/images/linkedinbttn.png" alt="LinkedIn" class="social-icon">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://github.com/MathewTomberlin" class="contact-link">
+                            <img src="./assets/images/giticon.png" alt="Resume" class="social-icon">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.artstation.com/mathewtomberlin" class="contact-link">
+                            <img src="./assets/images/artstationicon.png" alt="Resume" class="social-icon">
+                        </a>
+                    </li>
+                </ul>
             </div>
 
-            <div align="center" class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="images/stationattack2.gif">
-            </div>
+            <button class="info_more-btn" data-sidebar-btn>
+                <span>Show Contacts</span>
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
 
-            <div align="center" class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                <img src="images/blockblaster.gif">
-            </div>
-
-            <div align="center" class="mySlides">
-                <div class="numbertext">4 / 6</div>
-                <img src="images/thelastlight.gif">
-            </div>
-
-            <div align="center" class="mySlides" style="padding-top:17px;padding-bottom:17px;">
-                <div class="numbertext">5 / 6</div>
-                <img src="images/openocean_2.gif">
-            </div>
-
-            <div align="center" class="mySlides" style="padding-top:16px;padding-bottom:16px;">
-                <div class="numbertext">6 / 6</div>
-                <img src="images/replicationextermination.gif">
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <!-- Image text -->
-            <div class="caption-container">
-                <b><p id="caption"></p></b>
-            </div>
-
-            <!-- Thumbnail images -->
-            <div class="row">
-                <div class="column" align="center" style="padding-top:10px;padding-bottom:10px;">
-                    <img class="demo cursor" src="images/CombatDescentThumbnail 16.png" style="width:75%; height:75%;" onclick="currentSlide(1)" alt="Combat Descent">
-                </div>
-                <div class="column" align="center" style="padding-top:10px;padding-bottom:10px;">
-                    <img class="demo cursor" src="images/StationAttackThumbnail 0.png" style="width:75%; height:75%;" onclick="currentSlide(2)" alt="FLEET: Solar Empire">
-                </div>
-                <div class="column" align="center" style="padding-top:10px;padding-bottom:10px;">
-                    <img class="demo cursor" src="images/RetroRemixThumbnail 0.png" style="width:75%; height:75%;" onclick="currentSlide(3)" alt="Retro Remix: Block Blaster">
-                </div>
-                <div class="column" align="center" style="padding-top:10px;padding-bottom:10px;">
-                    <img class="demo cursor" src="images/TheLastLightThumbnail 0.png" style="width:75%; height:75%;" onclick="currentSlide(4)" alt="The Last Light">
-                </div>
-                <div class="column" align="center" style="padding-top:10px;padding-bottom:10px;">
-                    <img class="demo cursor" src="images/OpenOceanThumbnail 0.png" style="width:55%; height:55%;" onclick="currentSlide(5)" alt="Open Ocean VR">
-                </div>
-                <div class="column" align="center" style="padding-top:10px;padding-bottom:10px;">
-                    <img class="demo cursor" src="images/ReplicationExterminationThumbnail 0.png" style="width:55%; height:55%;" onclick="currentSlide(6)" alt="Replication Extermination">
-                </div>
-            </div>
         </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
         
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto:mathew.tomberlin@gmail.com" class="contact-link">mathew.tomberlin@gmail.com</a>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+                <address>San Luis Obispo, California, USA</address>
+              </div>
+            </li>
+
+          </ul>
+
+      </div>
+
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+        <!-- #NAVBAR -->
+
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <button class="navbar-link  active" data-nav-link>About</button>
+                </li>
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Portfolio</button>
+                </li>
+                <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>History</button>
+            </li>
+
+            </ul>
+
+        </nav>
+
+        <!--
+      - #ABOUT
+    -->
+
+        <article class="about  active" data-page="about">
+
+            <header>
+                <h2 class="h2 article-title">About</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    I'm a software engineer and Marine Corps intel veteran experienced in developing cutting-edge software and integrating it with complex hardware. 
+                    I have experience developing for VR and haptic devices for gaming, automation, and training, automated logistics software, and video games.
+                </p>
+            </section>
+
+
+            <!--
+          - service
+        -->
+
+            <section class="service">
+                <h3 class="h3 service-title"></h3>
+                <ul class="service-list">
+                    <li class="service-item">
+                        <div class="service-icon-box">
+                            <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+                        </div>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">Game Engineer</h4>
+                            <p class="service-item-text">
+                                Console, mobile, and network gameplay engineer and game designer
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="service-item">
+                        <div class="service-icon-box">
+                            <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+                        </div>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">VR Simulation Engineer</h4>
+                            <p class="service-item-text">
+                                VR simulation and peripheral design and testing
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="service-item">
+                        <div class="service-icon-box">
+                            <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                            
+                        </div>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">Full Stack Software Engineer</h4>
+                            <p class="service-item-text">
+                                Professional desktop and web front-end and back-end enterprise application engineer
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="service-item">
+                        <div class="service-icon-box">
+                            <img src="./assets/images/icon-photo.svg" alt="design icon" width="40">
+                        </div>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">3D Modeling and Animation</h4>
+                            <p class="service-item-text">
+                                High-quality 3D models, animation, and renders for animation or gaming
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <section class="clients">
+                <h3 class="h3 service-title">Recent Work</h3>
+                <ul class="clients-list has-scrollbar">
+                    <li class="clients-item">
+                        <video width="420" height="300" controls>
+                            <source src="assets/images/G1Demo_Beach.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </li>
+                    <li class="clients-item">
+                        <video width="420" height="300" controls>
+                            <source src="assets/images/Warehouse.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </li>
+                    <li class="clients-item">
+                        <video width="420" height="300" controls>
+                            <source src="assets/images/Clinic.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </li>
+                    <li class="clients-item">
+                        <video width="420" height="300" controls>
+                            <source src="assets/images/ISS_Interior.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </li>
+                    <li class="clients-item">
+                        <video width="420" height="300" controls>
+                            <source src="assets/images/ISS_Exterior.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </li>
+                    <li class="clients-item">
+                        <a href="#">
+                            <img src="./assets/images/warehouse.png" alt="Warehouse Scene">
+                        </a>
+                    </li>
+
+                    <li class="clients-item">
+                        <a href="#">
+                            <img src="./assets/images/computer.png" alt="Computer Scene">
+                        </a>
+                    </li>
+
+                    <li class="clients-item">
+                        <a href="#">
+                            <img src="./assets/images/iss_interior2.png" alt="ISS Interior Scene">
+                        </a>
+                    </li>
+
+                    <li class="clients-item">
+                        <a href="#">
+                            <img src="./assets/images/beach.png" alt="Beach">
+                        </a>
+                    </li>
+
+                    <li class="clients-item">
+                        <a href="#">
+                            <img src="./assets/images/UE_editor.png" alt="UE Editor">
+                        </a>
+                    </li>
+
+                    <li class="clients-item">
+                        <a href="#">
+                            <img src="./assets/images/ambulance.png" alt="Ambulance">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </article>
+
+        <!-- #PORTFOLIO -->
+
+        <article class="portfolio" data-page="portfolio">
+
+            <header>
+                <h2 class="h2 article-title">Portfolio</h2>
+            </header>
+
+            <section class="projects">
+
+                <ul class="filter-list">
+
+                    <li class="filter-item">
+                        <button class="active" data-filter-btn>All</button>
+                    </li>
+
+                    <li class="filter-item">
+                        <button data-filter-btn>Web design</button>
+                    </li>
+
+                    <li class="filter-item">
+                        <button data-filter-btn>Applications</button>
+                    </li>
+
+                    <li class="filter-item">
+                        <button data-filter-btn>Game Development</button>
+                    </li>
+
+                </ul>
+
+                <div class="filter-select-box">
+
+                    <button class="filter-select" data-select>
+
+                        <div class="select-value" data-selecct-value>Select category</div>
+
+                        <div class="select-icon">
+                            <ion-icon name="chevron-down"></ion-icon>
+                        </div>
+
+                    </button>
+
+                    <ul class="select-list">
+
+                        <li class="select-item">
+                            <button data-select-item>All</button>
+                        </li>
+
+                        <li class="select-item">
+                            <button data-select-item>Web design</button>
+                        </li>
+
+                        <li class="select-item">
+                            <button data-select-item>Applications</button>
+                        </li>
+
+                        <li class="select-item">
+                            <button data-select-item>Game Development</button>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <ul class="project-list">
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/beach.png" alt="HaptX G1 Demo" loading="lazy" data-project-img1>
+                                <img src="./assets/images/computer.png" alt="Simulated Computer and Keyboard" loading="lazy" class="project-detail-img" data-project-img2>
+                                <img src="./assets/images/warehouse.png" alt="Overhead Crane Trainer" loading="lazy" class="project-detail-img" data-project-img3>
+                                <img src="./assets/images/ambulance.png" alt="Ambulance" loading="lazy" class="project-detail-img" data-project-img4>
+                            </figure>
+                            <h3 class="project-title" data-project-title>HaptX G1 Demo</h3>
+                            <p class="project-text" data-project-text>
+                                The HaptX G1 Airpack and haptic feedback gloves feature a immersive, haptically-enabled, 4 scene VR demo meant to highlight the features
+                                of the system and SDK. The scenes were designed with industrial and medical training in mind, but also are enjoyable gaming experiences themselves.
+                            </p>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/iss_interior2.png" alt="ISS Repair Demo" loading="lazy" data-project-img1>
+                            </figure>
+                            <h3 class="project-title" data-project-title>HaptX ISS Repair Demo</h3>
+                            <p class="project-text" data-project-text>
+                                The ISS Repair demo was an unused, VR, haptically-enabled demo of the HaptX G1 Airpack and haptic feedback gloves. THe demo included an orienting lobby
+                                with simple, fun interactions followed by a guided space walk to use a weightless, tethered space drill to remove a broken component and replace it.
+                            </p>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/retro-remix.jpg" alt="Retro Remix" loading="lazy" data-project-img1>
+                                <img src="./assets/images/blockblaster.gif" alt="Block Blaster" loading="lazy" class="project-detail-img" data-project-img2>
+                                <img src="./assets/images/BeatMatch.jpg" alt="Beat Match" loading="lazy" class="project-detail-img" data-project-img3>
+                                <img src="./assets/images/lightchase.jpg" alt="Light Chase" loading="lazy" class="project-detail-img" data-project-img4>
+                            </figure>
+                            <h3 class="project-title" data-project-title>Retro Remix</h3>
+                            <p class="project-text" data-project-text>
+                                Retro Remix was an iOS App Store game that was a compilation of three classic-style games: Block Blaster, a Breakout-like game,
+                                Beat Match, a color and sequence memory game, and Light Chase, a pattern puzzle game.
+                            </p>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/openocean.gif" alt="Open Ocean" loading="lazy" data-project-img1>
+                                <img src="./assets/images/Fish.png" alt="Block Blaster" loading="lazy" class="project-detail-img" data-project-img2>
+                                <img src="./assets/images/OpenOceanVR.png" alt="Beat Match" loading="lazy" class="project-detail-img" data-project-img3>
+                                <img src="./assets/images/Aquarium.png" alt="Light Chase" loading="lazy" class="project-detail-img" data-project-img4>
+                            </figure>
+                            <h3 class="project-title" data-project-title>Open Ocean</h3>
+                            <p class="project-text" data-project-text>
+                                Open Ocean VR was a CSUMB capstone project where the player used controllers to identify sea creatures. It was designed by a game designer and included tools designed
+                                by Mat to allow designers to layout levels without coding experience.
+                            </p>
+                            <a href="https://gamejolt.com/games/OpenOcean/383524" target="_blank" class="project-link" data-project-link1>Play it now on GameJolt</a>
+                            <a href="https://github.com/MathewTomberlin/OpenOcean/releases/download/v1.0.0/OpenOceanBuild.zip" target="_blank" class="project-link" data-project-link2>Download now from GitHub</a>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/replicationextermination.jpg" alt="Replication Extermination" loading="lazy" data-project-img1>
+                                <img src="./assets/images/repextermination.jpg" alt="Replication Extermination" loading="lazy" class="project-detail-img" data-project-img2>
+                                <img src="./assets/images/repextermination2.gif" alt="Replication Extermination" loading="lazy" class="project-detail-img" data-project-img3>
+                                <img src="./assets/images/repextermination3.png" alt="Replication Extermination" loading="lazy" class="project-detail-img" data-project-img4>
+                            </figure>
+                            <h3 class="project-title" data-project-title>Replication Extermination</h3>
+                            <p class="project-text" data-project-text>
+                                Replication Extermination is a top-down stealth shooter designed for the One Mechanic Game Jam 3. The game features AI detection and path finding, upgrades, and a procedurally generated level.
+                            </p>
+                            <a href="https://crimsonoctopus.itch.io/replication-extermination" target="_blank" class="project-link" data-project-link1>Play it now on Itch.io</a>
+                            <a href="https://gamejolt.com/games/ReplicationExtermination/318941" target="_blank" class="project-link" data-project-link2>Play it now on GameJolt</a>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/breakout.png" alt="Block Breakout" loading="lazy" data-project-img1>
+                                <img src="./assets/images/breakout1.png" alt="Block Breakout" loading="lazy" class="project-detail-img" data-project-img2>
+                                <img src="./assets/images/breakout3.png" alt="Block Breakout" loading="lazy" class="project-detail-img" data-project-img3>
+                            </figure>
+                            <h3 class="project-title" data-project-title>Block Breakout</h3>
+                            <p class="project-text" data-project-text>
+                                Block Breakout is a clone of the classic Breakout game, written in C++ and UE4's Blueprints language. The game features three difficulty settings, bonus pickups and a persistent highscore. The game
+                                was made entirely by Mat as a practice exercise in UE4 and C++.
+                            </p>
+                            <a href="https://github.com/MathewTomberlin/Breakout/releases/download/v0.9.2-beta/BreakAllBricks.rar" target="_blank" class="project-link" data-project-link1>Download Game Now!</a>
+                            <a href="https://github.com/MathewTomberlin/Breakout" target="_blank" class="project-link" data-project-link2>Download Source on GitHub</a>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/tictactoe.png" alt="Tic-Tac-Toe" loading="lazy" data-project-img1>
+                            </figure>
+                            <h3 class="project-title" data-project-title>Tic-Tac-Toe</h3>
+                            <p class="project-text" data-project-text>
+                                This game is a simple Tic-Tac-Toe game made by Mat as a practice exercise with Unity, UGUI, shaders, and sprites, that includes a system that writes player actions to a log file.
+                            </p>
+                            <a href="https://gamejolt.com/games/tic-tac-toe-strategy/392322" target="_blank" class="project-link" data-project-link1>Download it now on GameJolt!</a>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/justonenight.png" alt="Just One Night VR" loading="lazy" data-project-img1>
+                            </figure>
+                            <h3 class="project-title" data-project-title>Just One Night VR</h3>
+                            <p class="project-text" data-project-text>
+                                A VR horror game that used the Leap Motion for optical hand tracking in which the player has to point a flashlight, and sometimes hit it with their other hand, to fend off ghosts
+                                as they move through a haunted house. Mat worked with a team of international artists who designed and made the 3D character models.
+                            </p>
+                            <a href="https://studentgames.itch.io/just-one-night" target="_blank" class="project-link" data-project-link1>Download it now for PC! (Requires Leap Motion Controller and VR Headset)</a>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/attackrunalpha.png" alt="Attack Run Alpha" loading="lazy" data-project-img1>
+                                <img src="./assets/images/attackrunalpha2.jpg" alt="Attack Run Alpha" loading="lazy" class="project-detail-img" data-project-img2>
+                                <img src="./assets/images/attackrunalpha3.jpg" alt="Attack Run Alpha" loading="lazy" class="project-detail-img" data-project-img3>
+                            </figure>
+                            <h3 class="project-title" data-project-title>Attack Run Alpha</h3>
+                            <p class="project-text" data-project-text>
+                                An iOS App Store mobile game that used the phone's accelerometer and tilting to pilot a starship through debris and asteroid fields while fighting off hostile alien fighters.
+                            </p>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/armored.png" alt="Combat Descent" loading="lazy">
+                                <img src="./assets/images/JetpackShotgun.gif" alt="Jetpack Combat" loading="lazy" class="project-detail-img" data-project-img2>
+                                <img src="./assets/images/Jetbike.png" alt="Jetbike Combat" loading="lazy" class="project-detail-img" data-project-img3>
+                                <img src="./assets/images/caverns.jpg" alt="Procedual Caverns" loading="lazy" class="project-detail-img" data-project-img4>
+                            </figure>
+                            <h3 class="project-title" data-project-title>Combat Descent</h3>
+                            <p class="project-text" data-project-text>
+                                Combat Descent was an experimental indie project designed to be a Battle Royal with with verticality and speed, set within procedurally generated environments.
+                            </p>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+                                <img src="./assets/images/fleet.jpg" alt="Fleet: Solar Empire" loading="lazy" data-project-img1>
+                                <img src="./assets/images/station.jpg" alt="Jetpack Combat" loading="lazy" class="project-detail-img" data-project-img2>
+                                <img src="./assets/images/FleetTitleScreen.jpg" alt="Jetbike Combat" loading="lazy" class="project-detail-img" data-project-img3>
+                                <img src="./assets/images/stationattack.gif" alt="Procedual Caverns" loading="lazy" class="project-detail-img" data-project-img4>
+                            </figure>
+                            <h3 class="project-title" data-project-title>Fleet: Solar Empire</h3>
+                            <p class="project-text" data-project-text>
+                                Fleet was an experimental indie project designed to be a Twitch stream-interactive tactical ship game, in which Twitch viewers could control individual crew of
+                                a ship that a Twitch streamer was directly controlling. The game was designed and developed entirely by Mat.
+                            </p>
+                            <p class="project-category">Game Development</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <div class="modal-container" data-modal-container>
+
+                <div class="overlay" data-overlay></div>
+
+                <section class="portfolio-modal">
+
+                    <button class="modal-close-btn" data-modal-close-btn>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                    <h4 class="h3 modal-title" data-modal-title></h4>
+                    <div class="modal-img-wrapper">
+                        <div class="project-gallery">
+                            <figure class="modal-image-box">
+                                <img src="./assets/images/project-1.png" alt="Project Image 1" width="80" data-image1-img>
+                            </figure>
+
+                            <figure class="modal-image-box">
+                                <img src="./assets/images/project-1.png" alt="Project Image 2" width="80" data-image2-img>
+                            </figure>
+
+                            <figure class="modal-image-box">
+                                <img src="./assets/images/project-1.png" alt="Project Image 3" width="80" data-image3-img>
+                            </figure>
+
+                            <figure class="modal-image-box">
+                                <img src="./assets/images/project-1.png" alt="Project Image 4" width="80" data-image4-img>
+                            </figure>
+                            <figure class="modal-image-box">
+                                <img src="./assets/images/project-1.png" alt="Project Image 5" width="80" data-image5-img>
+                            </figure>
+                            <figure class="modal-image-box">
+                                <img src="./assets/images/project-1.png" alt="Project Image 6" width="80" data-image6-img>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="modal-content">
+                        <div class="modal-text" data-modal-text></div>
+                        <a class="modal-link1" data-modal-link1></a>
+                        <a class="modal-link2" data-modal-link2></a>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </article>
+
+        <article class="history" data-page="history">
+            <header>
+                <h2 class="h2 article-title">History</h2>
+            </header>
+            <section class="about-text">
+                <h4 class="h4">Early Life</h4>
+                <img src="assets/images/digitalart.jpg" style="height:150px;width:auto;float:left;padding-right:20px;" />
+                <p>
+                    Mat was born and raised in Modesto, California where he tinkered with game engines like ZZT and RPG Maker while learning
+                    to 3D model, animate, and program games at home. He had his first computer when he was 5 years old. Mat has been drawing,
+                    painting, 3D modeling, and writing since he was a child.
+                </p>
+                </br>
+                </br>
+                </br>
+                <h4 class="h4">US Marine Corps</h4>
+                <img src="assets/images/Military.jpg" style="height:250px;width:auto;float:right;padding-left:20px;" />
+                <p>
+                    Mat enlisted in the US Marine Corps in 2007 and graduated from the
+                    Defense Language Institute, Monterey Bay with a fluency in Korean in 2009. He served 5 years in the US Marine Corps as a
+                    Korean linguist and intelligence operator, seting up and maintaining mission critical satellite communications equipment in jungle environments,
+                    facilitating medical and electronic equipment training courses for foreign military personnel and collecting intelligence in support of US military
+                    missions. Mat has traveled around the world, met, lived with and worked with a diverse range of peoples, overseen fireteams of Marines, volunteered
+                    with Toys for Tots and operated sensitive equipment in rugged and dangerous locations. He completed his military term as a sergeant in 2011.
+                </p>
+                </br>
+                <h4 class="h4">College</h4>
+                <img src="assets/images/gauntlet.png" style="height:250px;width:auto;float:left;padding-right:20px;" />
+                <p>
+                    Mat's next adventure began immediately after, at the Academy of Art University in San Francisco, studying Illustration
+                    and 3D Modeling. Mat eventually transferred to CSU Monterey Bay and attained a BS in Computer Science with a concentration in Game
+                    Programming in 2018. During his time at CSUMB, Mat worked as an undergraduate researcher and developed the Gauntlet VR travel technique,
+                    about which he wrote and published a paper at IEEE VR 2017 and also lectured a few classes on setting up and using Oculus Rift headsets
+                    and Leap Motion optical hand tracking devices. During Mat's final semester at CSUMB, he taught a game development class to highschool students at
+                    Everette Alvarez Highschool utilizing PlayCanvas (a Chromebook friendly, browser-based Javascript game engine similar to Unity 3D). For that course,
+                    he wrote 36 pages of Javascript, PlayCanvas and generic game design documentation for the students. Simultaneously, Mat worked closely with a game
+                    designer and two programmers to design game mechanics and develop an educational, underwater VR game called Open Ocean VR in Unity3D. Mat was responsible
+                    for 3D modeling each of the marine wildlife in Blender, programming their movement behaviors and the game's event system as well as creating Unity 3D tools
+                    for level designers to utilize.
+                </p>
+                </br>
+                <h4 class="h4">Indie Game Developer</h4>
+                <p>
+                    During that time, Mat worked as an independent video game developer, designing and developing
+                    experimental game projects, like Fleet and Combat Descent, and a few other projects that were released on the iOS App Store, like Retro Remix
+                    and Attack Run Alpha.
+                </p>
+                </br>
+                <h4 class="h4">Family</h4>
+                <p>
+                    During his time in college, Mat met and married his wife. They've been married for 9 years and have a child and three cats.
+                </p>
+                </br>
+                <h4 class="h4">HaptX and Tapestry Solutions</h4>
+                <p>
+                    Mat had a start at HaptX in 2019, where, in his short time, he created a haptic VR design tool in Unreal Engine that could be used to
+                    review automotive or industrial designs in real-time. From there, Mat moved on to work at Tapestry Solutions, where he worked for 3 years developing
+                    government and commercial logistics software used to automate ship and warehouse loading. Mat did front-end work in React, Redux, and TypeScript and
+                    also back-end work on the REST API, SQL database, and Kafka messaging queues.
+                </p>
+                </br>
+                <h4 class="h4">Return to HaptX</h4>
+                <video width="288" height="216" style="float:left;padding-right:20px;" controls>
+                    <source src="assets/images/G1Demo_Beach.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>
+                    Mat returned to HaptX in 2022 and began work designing a VR demo set aboard the International Space Station, where the user remotely piloted a robot
+                    and used HaptX haptic gloves and Airpack to feel what the robot felt while fixing the space station. Next, Mat and the content team
+                    began designing and developing the new G1 Airpack and Glove's VR haptic demo. The demo includes 4 scenes, each of which demonstrates various features
+                    of the gloves or types of training scenarios that a developer could create with the gloves. Mat created 3 of the 4 scenes, including the the gameplay
+                    programming, environments, level layouts, materials, textures, SFX, lighting, haptic effects, and a majority of the 3D models. The G1 Demo won Best in
+                    Show - Audience Choice at AWE 2024. During his time with HaptX, Mat gave hundreds of demos, tested hundreds of gloves and Airpacks, created new software
+                    and processes to validate glove functionality, directly improved the Unreal Engine plugin, and lectured to a college class about VR and haptics. Mat's
+                    deep knowledge and experience as the team member with the most time wearing the G1 gloves was widely used to ensure good investor and conference demos were given
+                    and that gloves arriving from the manufacturer were functioning as intended.
+                </p>
+                </br>
+                <h4 class="h4">Adventures Anew</h4>
+                <p>
+                    Mat has recently become available for new work and is looking forward to his next opportunity in the VR, game development, or software engineering fields.
+                </p>
+            </section>
+
+        </article>
+
     </div>
 
-    <footer style="text-align: center; color: white;">
-        <h4>&copy; 2018 Mathew Tomberlin. All rights reserved.</h4>
-    </footer>
-    <script src="src/js/imagegallery.js"></script>
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
