@@ -556,6 +556,8 @@ main {
 .modal-title {
     display: flex;
     justify-content: center;
+    padding-bottom:15px;
+    font-size: 26px;
 }
 
 .modal-content time {
