@@ -26,15 +26,15 @@
 
     <!-- #SIDEBAR -->
     <aside class="sidebar" data-sidebar>
-
         <div class="sidebar-info">
-            <figure class="avatar-box">
+            <figure class="info-avatar">
                 <img src="./assets/images/avatar.png" alt="Mathew Tomberlin">
             </figure>
 
             <div class="info-content">
                 <h1 class="name" title="Mathew Tomberlin">Mathew Tomberlin</h1>
                 <p class="title">Software Engineer</p>
+                <p class="title">Marine Veteran</p>
                 <ul class="social-list">
                     <li class="social-item">
                         <a href="https://docs.google.com/document/d/1EmdsTu8yUYHbxUtHSgORKfvrdF0JPQ15XJriVaQsvk4/edit?usp=sharing" class="contact-link">
@@ -43,7 +43,7 @@
                     </li>
                     <li class="social-item">
                         <a href="mailto:mathew.tomberlin@gmail.com" class="contact-link">
-                            <img src="./assets/images/emailicon.png" alt="Resume" class="social-icon">
+                            <img src="./assets/images/emailicon.png" alt="Email" class="social-icon">
                         </a>
                     </li>
                     <li class="social-item">
@@ -53,45 +53,34 @@
                     </li>
                     <li class="social-item">
                         <a href="https://github.com/MathewTomberlin" class="contact-link">
-                            <img src="./assets/images/giticon.png" alt="Resume" class="social-icon">
+                            <img src="./assets/images/giticon.png" alt="GitHub" class="social-icon">
                         </a>
                     </li>
                     <li class="social-item">
                         <a href="https://www.artstation.com/mathewtomberlin" class="contact-link">
-                            <img src="./assets/images/artstationicon.png" alt="Resume" class="social-icon">
+                            <img src="./assets/images/artstationicon.png" alt="Art Station" class="social-icon">
                         </a>
                     </li>
                 </ul>
             </div>
 
-            <button class="info_more-btn" data-sidebar-btn>
-                <span>Show Contacts</span>
-                <ion-icon name="chevron-down"></ion-icon>
-            </button>
-
         </div>
 
-      <div class="sidebar-info_more">
-        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:mathew.tomberlin@gmail.com" class="contact-link">mathew.tomberlin@gmail.com</a>
+            </div>
+          </li>
         
-          <ul class="contacts-list">
-            <li class="contact-item">
-              <div class="contact-info">
-                <p class="contact-title">Email</p>
-                <a href="mailto:mathew.tomberlin@gmail.com" class="contact-link">mathew.tomberlin@gmail.com</a>
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="contact-info">
-                <p class="contact-title">Location</p>
-                <address>San Luis Obispo, California, USA</address>
-              </div>
-            </li>
-
-          </ul>
-
-      </div>
+          <li class="contact-item">
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>San Luis Obispo, California, USA</address>
+            </div>
+          </li>
+        </ul>
 
     </aside>
 
@@ -365,69 +354,12 @@
         <!-- #PORTFOLIO -->
 
         <article class="portfolio" data-page="portfolio">
-
             <header>
                 <h2 class="h2 article-title">Portfolio</h2>
             </header>
 
             <section class="projects">
-
-                <ul class="filter-list">
-
-                    <li class="filter-item">
-                        <button class="active" data-filter-btn>All</button>
-                    </li>
-
-                    <li class="filter-item">
-                        <button data-filter-btn>Web design</button>
-                    </li>
-
-                    <li class="filter-item">
-                        <button data-filter-btn>Applications</button>
-                    </li>
-
-                    <li class="filter-item">
-                        <button data-filter-btn>Game Development</button>
-                    </li>
-
-                </ul>
-
-                <div class="filter-select-box">
-
-                    <button class="filter-select" data-select>
-
-                        <div class="select-value" data-selecct-value>Select category</div>
-
-                        <div class="select-icon">
-                            <ion-icon name="chevron-down"></ion-icon>
-                        </div>
-
-                    </button>
-
-                    <ul class="select-list">
-
-                        <li class="select-item">
-                            <button data-select-item>All</button>
-                        </li>
-
-                        <li class="select-item">
-                            <button data-select-item>Web design</button>
-                        </li>
-
-                        <li class="select-item">
-                            <button data-select-item>Applications</button>
-                        </li>
-
-                        <li class="select-item">
-                            <button data-select-item>Game Development</button>
-                        </li>
-
-                    </ul>
-
-                </div>
-
                 <ul class="project-list">
-
                     <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
                         <a href="#">
                             <figure class="project-img">
