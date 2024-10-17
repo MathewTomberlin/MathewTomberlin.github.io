@@ -357,7 +357,7 @@ main {
   color: rgb(0,200,200);
   font-size: 14px;
   font-weight: var(--fw-600);
-  padding: 10px 30px;
+  padding: 10px 25px;
   transition: color var(--transition-1);
 }
 
