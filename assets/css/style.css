@@ -240,7 +240,7 @@ article.active {
 
 .has-scrollbar::-webkit-scrollbar {
   width: 0px; /* for vertical scrollbar */
-  height: 40px; /* for horizontal scrollbar */
+  height: 20px; /* for horizontal scrollbar */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
