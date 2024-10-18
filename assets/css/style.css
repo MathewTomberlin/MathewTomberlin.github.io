@@ -240,7 +240,7 @@ article.active {
 
 .has-scrollbar::-webkit-scrollbar {
   width: 0px; /* for vertical scrollbar */
-  height: 20px; /* for horizontal scrollbar */
+  height: 40px; /* for horizontal scrollbar */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -251,6 +251,7 @@ article.active {
 .has-scrollbar::-webkit-scrollbar-thumb {
   background: rgb(200,200,200);
   border: 1px solid rgb(0,0,0);
+  min-width: 120px;
 }
 
 .has-scrollbar::-webkit-scrollbar-button {
