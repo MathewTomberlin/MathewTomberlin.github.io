@@ -214,7 +214,7 @@ article {
     border-radius: 10px;
     z-index: 1;
     max-height: max-content;
-    width: 435px;
+    width: 420px;
 }
 
 article {
@@ -737,7 +737,7 @@ main {
 
     /* Sidebar */
     .sidebar, article {
-        width: 435px;
+        width: 420px;
         margin-inline: auto;
     }
 
@@ -777,7 +777,7 @@ main {
 
     /* Reused Style */
     .sidebar, article, .navbar {
-        width: 560px;
+        width: 550px;
     }
 
     article {
@@ -835,7 +835,7 @@ main {
 
     /* Reused Style */
     .sidebar, article, .navbar {
-        width: 745px;
+        width: 738px;
     }
 
     /* PORTFOLIO PAGE */
@@ -905,7 +905,7 @@ main {
 
     /* Reused Style */
     .sidebar, article, .navbar {
-        width: 995px;
+        width: 994px;
     }
 
     main {
