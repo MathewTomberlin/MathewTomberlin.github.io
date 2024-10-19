@@ -338,12 +338,11 @@ main {
 }
 
 .history-digitalart {
-  height: 200px;
-  width: 380px;
-  margin:auto;
-  padding-right: 0px;
-  padding-bottom: 10px;
-  overflow:hidden;
+    height: 200px;
+    width: 380px;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 
 .history-military {
@@ -378,6 +377,7 @@ main {
 
 .history-digitalart img {
     width: 380px;
+    height: auto;
     position:relative;
     bottom: 85px;
 }
@@ -857,12 +857,12 @@ main {
     }
 
     .history-digitalart {
-        width: 700px;
+        width: 650px;
     }
 
     .history-digitalart img {
-        width: 700px;
-        bottom:180px;
+        width: 650px;
+        bottom: 150px;
     }
 
     .history-indie {
@@ -947,9 +947,14 @@ main {
     .history-digitalart {
         float: left;
         height: 180px;
-        width: auto;
-        padding-top: 10px;
-        padding-right: 10px;
+        width: 400px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .history-digitalart img {
+        width: 400px;
+        bottom: 75px;
     }
 
     .history-chapter-military {
@@ -1090,6 +1095,7 @@ main {
     }
 
     .history-digitalart {
+        width: 400px;
         height: 230px;
     }
 }
