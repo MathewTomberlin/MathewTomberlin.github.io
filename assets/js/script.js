@@ -52,6 +52,19 @@ for (let i = 0; i < portfolioItem.length; i++) {
             img.className = "modal-img";
         }
 
+        //Add videos for this portfolio item
+        let projectVideos = this.querySelectorAll("[data-project-video]");
+        for (let projVid of projectVideos) {
+            let item = modalImgList.appendChild(document.createElement('li'));
+            item.className = "modal-item";
+            let vid = item.appendChild(document.createElement('video'));
+            vid.controls = true;
+            let source = vid.appendChild(document.createElement('source'));
+            let vidSrc = projVid.querySelector("source");
+            source.src = vidSrc.src;
+            source.type = vidSrc.type;
+        }
+
         //Update link1 and link2
         modalTitle.innerHTML = this.querySelector("[data-project-title]").innerHTML;
         modalText.innerHTML = this.querySelector("[data-project-text]").innerHTML;
