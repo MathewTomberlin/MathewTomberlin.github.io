@@ -154,6 +154,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
+        sessionStorage.setItem("page", pages[i].dataset.page);
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
@@ -161,4 +162,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+}
+
+if (localStorage.getItem("page") === pages[i].dataset.page) {
+    pages[i].classList.add("active");
+    navigationLinks[i].classList.add("active");
+    window.scrollTo(0, 0);
 }

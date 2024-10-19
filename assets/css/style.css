@@ -545,8 +545,8 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  width: 200%;
+  height: 200vh;
   background: hsl(250, 60%, 15%);
   opacity: 0;
   visibility: hidden;
