@@ -137,7 +137,7 @@ body { background: var(--smoky-black); }
     scroll-behavior: smooth;
     margin-bottom: 5px;
     border: 2px solid rgb(0,0,0);
-    max-height:105px;
+    max-height:125px;
 }
 
 .modal-item {
@@ -153,12 +153,12 @@ body { background: var(--smoky-black); }
 }
 
 .modal-item img {
-    max-height: 80px;
+    height: 100px;
 }
 
 .modal-item video {
     width:auto;
-    max-height:80px;
+    height:100px;
 }
 
 .modal-item source {
@@ -560,7 +560,6 @@ main {
     background: var(--eerie-black-2);
     position: relative;
     padding: 15px;
-    height:80%;
     overflow-x:auto;
     border: 2px solid rgb(230,200,0);
     border-radius: 5px;
@@ -1080,23 +1079,5 @@ main {
 
     .modal-item video {
         height: 230px;
-    }
-}
-
-@media (min-height: 200px) {
-    .portfolio-modal {
-        max-height: initial;
-    }
-
-    .modal-img-list {
-        max-height: initial;
-    }
-
-    .modal-item img {
-        max-height: initial;
-    }
-
-    .modal-item video {
-        max-height: initial;
     }
 }
