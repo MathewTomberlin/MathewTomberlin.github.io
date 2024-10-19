@@ -3,13 +3,6 @@
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-//const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-//sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
 // testimonials variables
 //const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const portfolioItem = document.querySelectorAll("[data-portfolio-item]");
@@ -23,6 +16,9 @@ const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 const modalLink1 = document.querySelector("[data-modal-link1]");
 const modalLink2 = document.querySelector("[data-modal-link2]");
+
+const copyItem = document.querySelectorAll("[data-info-copy]");
+const eyeItem = document.querySelectorAll(".project-item-icon-box");
 
 // modal toggle function
 const toggleModalShown = function () {
@@ -71,6 +67,62 @@ for (let i = 0; i < portfolioItem.length; i++) {
         toggleModalShown();
     });
 
+}
+
+function fallbackCopyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Fallback: Copying text command was ' + msg);
+    } catch (err) {
+        console.error('Fallback: Oops, unable to copy', err);
+    }
+
+    document.body.removeChild(textArea);
+}
+function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text);
+}
+
+const tooltip = document.querySelector('.tooltip-text');
+for (let i = 0; i < copyItem.length; i++) {
+    copyItem[i].addEventListener('click', function (event) {
+        copyTextToClipboard('Mathew Tomberlin');
+        tooltip.style.background = 'rgb(50,255,50)';
+        tooltip.textContent = 'Copied!';
+    });
+    copyItem[i].addEventListener('mouseover', function (event) {
+        document.body.style.cursor = 'cell';
+        tooltip.textContent = 'Copy?';
+        tooltip.style.background = 'rgb(150,150,150)';
+    });
+    copyItem[i].addEventListener('mouseout', function (event) {
+        document.body.style.cursor = 'default';
+    });
+    copyItem[i].addEventListener('mousemove', function (event) {
+        tooltip.style.left = (event.pageX + 10) + 'px';
+        tooltip.style.top = (event.pageY - 30) + 'px';
+        tooltip.style.display = 'block';
+    });
+    copyItem[i].addEventListener('mouseout', function (event) {
+        tooltip.style.display = 'none';
+    });
 }
 
 // add click event to modal close button

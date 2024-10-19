@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+    <p class="tooltip-text"></p>
   <!-- MAIN -->
     <main>
         <!-- #NAVBAR -->
@@ -47,7 +47,7 @@
                 </figure>
 
                 <div class="info-content">
-                    <h1 class="name" title="Mathew Tomberlin">Mathew Tomberlin</h1>
+                    <h1 class="name" data-info-copy>Mathew Tomberlin</h1>
                     <p class="title">Software Engineer</p>
                     <p class="title">Marine Veteran</p>
                     <ul class="social-list">
@@ -57,13 +57,13 @@
                             </a>
                         </li>
                         <li class="social-item">
-                            <a href="mailto:mathew.tomberlin@gmail.com" class="contact-link">
-                                <img src="./assets/images/emailicon.png" alt="Email" class="social-icon">
+                            <a href="https://www.linkedin.com/in/mathew-tomberlin-4b570aa7/" class="contact-link">
+                                <img src="./assets/images/linkedinbttn.png" alt="LinkedIn" class="social-icon">
                             </a>
                         </li>
                         <li class="social-item">
-                            <a href="https://www.linkedin.com/in/mathew-tomberlin-4b570aa7/" class="contact-link">
-                                <img src="./assets/images/linkedinbttn.png" alt="LinkedIn" class="social-icon">
+                            <a href="mailto:mathew.tomberlin@gmail.com" class="contact-link">
+                                <img src="./assets/images/emailicon.png" alt="Email" class="social-icon">
                             </a>
                         </li>
                         <li class="social-item">
@@ -77,25 +77,9 @@
                             </a>
                         </li>
                     </ul>
+                    <a href="mailto:mathew.tomberlin@gmail.com" class="contact-info">mathew.tomberlin@gmail.com</a>
                 </div>
             </div>
-
-            <ul class="contacts-list">
-                <li class="contact-item">
-                    <div class="contact-info">
-                        <p class="contact-title">Email</p>
-                        <a href="mailto:mathew.tomberlin@gmail.com" class="contact-link">mathew.tomberlin@gmail.com</a>
-                    </div>
-                </li>
-
-                <li class="contact-item">
-                    <div class="contact-info">
-                        <p class="contact-title">Location</p>
-                        <address>San Luis Obispo, California, USA</address>
-                    </div>
-                </li>
-            </ul>
-
         </aside>
 
         <!--
@@ -109,71 +93,58 @@
         -->
 
             <article class="about  active" data-page="about">
-
-                <header>
-                    <h3 class="h3 article-title">About</h3>
-                </header>
-
-                <section class="about-text">
-                    <p>
-                        I'm a software engineer and Marine Corps intelligence veteran experienced in developing cutting-edge software and integrating it with complex hardware.
-                        I have experience developing for VR and haptic devices for gaming, automation, and training, automated logistics software, and video games.
-                    </p>
+                <section class="body-text">
+                    Software Engineer with experience developing video games on multiple platforms,
+                    designing immersive virtual reality experiences, and building web applications at enterprise-scale.
                 </section>
 
-
-                <!--
-              - service
-            -->
-
+                <!-- service -->
                 <section class="service">
-                    <h3 class="h3 article-title"></h3>
                     <ul class="service-list">
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+                                <ion-icon name="earth-outline" style="font-size:40px;color:rgb(240,205,100);"></ion-icon>
                             </div>
                             <div class="service-content-box">
-                                <h4 class="h5 service-item-title">Game Engineer</h4>
+                                <h4 class="h5 service-item-title">Game Developer</h4>
                                 <p class="service-item-text">
-                                    Console, mobile, and network gameplay engineer and game designer
+                                    Ships mobile, PC, and console video games
                                 </p>
                             </div>
                         </li>
 
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+                                <ion-icon name="construct-outline" style="font-size:40px;color:rgb(240,205,100);"></ion-icon>
                             </div>
                             <div class="service-content-box">
-                                <h4 class="h5 service-item-title">VR Simulation Engineer</h4>
+                                <h4 class="h5 service-item-title">Simulation Engineer</h4>
                                 <p class="service-item-text">
-                                    VR and simulation design and hardware development and testing
+                                    Builds VR experiences and autonomous systems
                                 </p>
                             </div>
                         </li>
 
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-
+                                <ion-icon name="terminal-outline" style="font-size:40px;color:rgb(240,205,100);"></ion-icon>
                             </div>
                             <div class="service-content-box">
-                                <h4 class="h5 service-item-title">Full Stack Software Engineer</h4>
+                                <h4 class="h5 service-item-title">Enterprise Developer</h4>
                                 <p class="service-item-text">
-                                    Desktop and web front-and-back-end enterprise application engineer
+                                    Develops UI, API, and DB for live enterprise apps
                                 </p>
                             </div>
                         </li>
 
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="./assets/images/icon-photo.svg" alt="design icon" width="40">
+                                <ion-icon name="sparkles-outline" style="font-size:40px;color:rgb(240,205,100);"></ion-icon>
                             </div>
                             <div class="service-content-box">
-                                <h4 class="h5 service-item-title">3D Modeling and Animation</h4>
+                                <h4 class="h5 service-item-title">Artist and Animator</h4>
                                 <p class="service-item-text">
-                                    Professional and high-quality 3D models, animation, and renders
+                                    Creates 3D models, characters, and animations
                                 </p>
                             </div>
                         </li>
@@ -182,7 +153,7 @@
 
                 </section>
 
-                <section class="clients">
+                <!--<section class="clients">
                     <h3 class="h3 article-title">Recent Work</h3>
                     <ul class="clients-list has-scrollbar">
                         <li class="clients-item">
@@ -343,7 +314,7 @@
 
                     </ul>
 
-                </section>
+                </section>-->
 
             </article>
 
@@ -603,90 +574,65 @@
                 <header>
                     <h3 class="h3 article-title">History</h2>
                 </header>
-                <section class="about-text">
+                <section class="body-text">
                     <div class="history-chapter">
-                        <h2 class="h2">Early Life</h2>
                         <img src="assets/images/digitalart.jpg" class="history-digitalart" />
+                        <h2 class="h2">Early Life</h2>
                         <p>
-                            Mat was born and raised in Modesto, California where he tinkered with game engines like ZZT and RPG Maker while learning
-                            to 3D model, animate, and program games at home. He had his first computer when he was 5 years old. Mat has been drawing,
-                            painting, 3D modeling, and writing since he was a child.
+                            Mat was raised in Modesto, California where he tinkered with game engines like ZZT and RPG Maker as a child. Throughout middle and high school, he taught himself
+                            3D modeling and animation, game programming, and digital illustration.
                         </p>
                     </div>
                     <div class="history-chapter-military">
+                        <img src="assets/images/marines.PNG" class="history-military" />
                         <h2 class="h2">US Marine Corps</h2>
-                        <img src="assets/images/Military.jpg" class="history-military" />
                         <p>
-                            Mat enlisted in the US Marine Corps in 2007 and graduated from the
-                            Defense Language Institute, Monterey Bay with a fluency in Korean in 2009. He served 5 years in the US Marine Corps as a
-                            Korean linguist and intelligence operator, setting up and maintaining mission critical satellite communications equipment in jungle environments,
-                            facilitating medical and electronic equipment training courses for foreign military personnel, and collecting intelligence in support of US military
-                            missions. Mat has traveled around the world, met, lived with, and worked with a diverse range of peoples, overseen fireteams of Marines, volunteered
-                            with Toys for Tots, and operated sensitive equipment in rugged and dangerous locations. He completed his military term as a sergeant in 2012.
+                            Mat enlisted in the US Marine Corps in 2007 and graduated from the Defense Language Institute, Foreign Language Center, Monterey Bay
+                            as a Korean linguist. During his 5 years enlisted, Mat served as an intelligence operator and deployed alongside the FBI and Army, Navy, and Marine
+                            Special Forces units to establish, maintain, and operating mission critical electronic equipment in rugged environments.
+                            He completed his military term as a sergeant in 2012.
                         </p>
                     </div>
                     </br>
-                    <h2 class="h2">College</h2>
                     <img src="assets/images/gauntlet.png" class="history-college" />
+                    <h2 class="h2">College</h2>
                     <p>
-                        Mat's next adventure began immediately after, at the Academy of Art University in San Francisco, studying Illustration
-                        and 3D Modeling. Mat eventually transferred to CSU Monterey Bay and attained a BS in Computer Science with a concentration in Game
-                        Programming in 2018. During his time at CSUMB, Mat worked as an undergraduate researcher and developed the Gauntlet VR travel technique,
-                        about which he wrote and published a paper at IEEE VR 2017 and also lectured a few classes on setting up and using Oculus Rift headsets
-                        and Leap Motion optical hand tracking devices. During Mat's final semester at CSUMB, he taught a game development class to highschool students at
-                        Everette Alvarez Highschool utilizing PlayCanvas (a Chromebook friendly, browser-based Javascript game engine similar to Unity 3D). For that course,
-                        he wrote 36 pages of Javascript, PlayCanvas, and generic game design documentation for the students. Simultaneously, Mat worked closely with a game
-                        designer and two programmers to design game mechanics and develop an educational, underwater VR game called Open Ocean VR in Unity3D. Mat was responsible
-                        for 3D modeling each of the marine wildlife in Blender, programming their movement behaviors and the game's event system as well as creating Unity 3D tools
-                        for level designers to utilize.
+                        Following his military career, Mat briefly attended the Academy of Art University in San Francisco before transferring to CSU Monterey Bay.
+                        He graduated in 2018 with a BS in Computer Science and a concentration in Game Programming) During that time, Mat developed the Gauntlet VR travel technique
+                        and published a paper about it at IEEE VR 2017, lectured about VR headsets and Leap Motion hand tracking in college classes, taught game development classes to both
+                        other college students and, later, to highschool students in two different game development clubs, and developed three VR games in Unity 3D: a capstone project called
+                        Open Ocean VR, a horror game called Just One Night, and a game described by a PHD thesis that used an EEG headset to adapt the game's difficulty based on a user's attention.
                     </p>
                     </br>
-                    <h2 class="h2">Indie Game Developer</h2>
                     <img src="assets/images/jetbike.png" class="history-indie" />
+                    <h2 class="h2">Game Developer Career</h2>
                     <p>
-                        During that time, Mat worked as an independent video game developer, designing and developing
-                        experimental game projects, like Fleet and Combat Descent, and a few other projects that were released on the iOS App Store, like Retro Remix
-                        and Attack Run Alpha. Fleet was an experimental starship command game in which a Twitch streamer's viewers could control crewmembers aboard the starship
-                        while the streamer controlled the ship. Combat Descent was an experimental Battle Royal set within procedurally generated underground caverns, utilizing
-                        jetpacks, anti-gravity vehicles, and grappling hooks to allow for vertical movement.
+                        During the military and college, Mat developed some experimental games as a hobby, like Fleet and Combat Descent, as well as a few other,
+                        non-experimental projects that released on the iOS App Store, like Retro Remix and Attack Run Alpha. He honed his
+                        game development and 3D art skills until he started at HaptX in 2019, where, in his short time, he created a haptic VR tool in UE4 that could be used to
+                        review automotive or industrial designs in real-time. Mat moved on to work at Tapestry Solutions, a Boeing software company, where he worked for 3 years developing and updating
+                        the ICODES Load Planner, a government and commercial logistics software used to automate ship and warehouse loading, and began founding work on the back-end Kafka
+                        messaging queues used by Boeing ESI (Enterprise Sensor Intregration) to create automated facilities using sensors and RFID tags.
                     </p>
                     </br>
-                    <h2 class="h2">Family</h2>
-                    <p>
-                        During his time in college, Mat met and married his amazing wife. They've been married for 9 years and have a child and three cats.
-                    </p>
-                    </br>
-                    <h2 class="h2">HaptX and Tapestry Solutions</h2>
-                    <p>
-                        Mat had a start at HaptX in 2019, where, in his short time, he created a haptic VR design tool in Unreal Engine that could be used to
-                        review automotive or industrial designs in real-time. From there, Mat moved on to work at Tapestry Solutions, where he worked for 3 years developing and updating
-                        the ICODES Load Planner, a government and commercial logistics software used to automate ship and warehouse loading, and began founding work on the back-end Kafka 
-                        messaging queues used by Boeing ESI (Enterprise Sensor Intregration) to create automated facilities using sensors and RFID tags. Mat did front-end work in React, 
-                        Redux, and TypeScript and also back-end work on the REST API, SQL database, and Kafka messaging queues.
-                    </p>
-                    </br>
-                    <h2 class="h2">Return to HaptX</h2>
                     <div class="history-haptx">
                         <video controls>
                             <source src="assets/images/G1_Beach_Map.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
+                    <h2 class="h2">Return to HaptX</h2>
                     <p>
                         Mat returned to HaptX in 2022 and began work designing a VR demo set aboard the International Space Station, where the user remotely piloted a robot
-                        and used HaptX haptic gloves to feel whatever the virtual robot hands felt while fixing the space station. Next, Mat and the content team
-                        began designing and developing the new haptic demo for the G1 Airpack and Gloves. The demo includes 4 scenes, each of which demonstrates various features
-                        of the gloves or types of training scenarios that a developer could create with the HaptX G1 Gloves and SDK. Mat created 3 of the 4 scenes, including the the gameplay
-                        programming, environments, level layouts, materials, textures, SFX, lighting, haptic effects, and a majority of the 3D models. The G1 Demo won Best in
-                        Show - Audience Choice at AWE 2024. During his time with HaptX, Mat gave hundreds of demos, tested hundreds of gloves and Airpacks, created new software
-                        and processes to validate glove functionality, directly improved the Unreal Engine plugin, and lectured to a college class about VR and haptics. Mat's
-                        deep knowledge and experience as the team member with the most time wearing the G1 gloves was widely used to ensure good investor and conference demos were given
-                        and that gloves arriving from the manufacturer functioned as intended.
+                        and used haptic gloves to feel whatever the virtual robot hands felt while fixing the space station. Next, Mat and the content team
+                        began developing the new demo for the G1 Airpack and haptic Gloves. Mat created the entirety of 3 of the demo's 4 scenes. The G1 Demo won Best in
+                        Show at AWE 2024. Besides creating haptic VR demos at HaptX, Mat administered hundreds of demos, including at ITSEC 2023, tested hundreds of alpha, beta, and production gloves, created new software
+                        to validate glove functionality, and lectured to a CalPoly university class about VR, haptics, and digital twins.
                     </p>
                     </br>
-                    <h2 class="h2">Adventures Anew</h2>
+                    <h2 class="h2">Family</h2>
                     <p>
-                        Mat has recently become available for new work and is looking forward to his next opportunity in the VR, game development, or software engineering fields.
+                        Mat is married to his amazing wife of 9 years and they have a child and three cats.
                     </p>
                 </section>
 
