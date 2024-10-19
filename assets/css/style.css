@@ -1083,7 +1083,7 @@ main {
     }
 }
 
-@media (min-height: 400px) {
+@media (min-height: 200px) {
     .portfolio-modal {
         height: unset;
     }
