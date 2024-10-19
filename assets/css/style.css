@@ -137,7 +137,7 @@ body { background: var(--smoky-black); }
     scroll-behavior: smooth;
     margin-bottom: 5px;
     border: 2px solid rgb(0,0,0);
-    max-height:125px;
+    height: 145px;
 }
 
 .modal-item {
@@ -145,7 +145,6 @@ body { background: var(--smoky-black); }
     align-self: start;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
@@ -153,12 +152,12 @@ body { background: var(--smoky-black); }
 }
 
 .modal-item img {
-    height: 100px;
+    height: 120px;
 }
 
 .modal-item video {
-    width:auto;
-    height:100px;
+    width: auto;
+    height: 120px;
 }
 
 .modal-item source {
@@ -173,7 +172,6 @@ body { background: var(--smoky-black); }
     align-self: start;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
@@ -214,7 +212,7 @@ article {
     border-radius: 10px;
     z-index: 1;
     max-height: max-content;
-    width: 420px;
+    width: 425px;
 }
 
 article {
@@ -410,7 +408,7 @@ main {
   border-top-width:0;
   z-index: 5;
   transition: var(--transition-1);
-  fade 0.5s ease backwards;
+  animation: fade 0.5s ease backwards;
 }
 
 .navbar-list {
@@ -526,7 +524,6 @@ main {
   justify-content: center;
   align-items: center;
   overflow-y: auto;
-  overscroll-behavior: contain;
   z-index: 20;
   pointer-events: none;
   visibility: hidden;
@@ -614,9 +611,9 @@ main {
 
 .modal-text {
     color: var(--light-gray);
-    font-size: var(--f-titles-6);
+    font-size: 12px;
     font-weight: var(--fw-300);
-    line-height: 1.6;
+    line-height: 1.25;
     padding: 10px 0px;
 }
 
@@ -736,13 +733,12 @@ main {
 @media (min-width: 450px) {
 
     /* Sidebar */
-    .sidebar, article {
-        width: 420px;
-        margin-inline: auto;
+    .sidebar, article, .navbar {
+        width: 425px;
     }
 
-    .navbar {
-        width: 440px;
+    .sidebar, article {
+        margin-inline: auto;
     }
 
     .contact-title {
@@ -777,7 +773,7 @@ main {
 
     /* Reused Style */
     .sidebar, article, .navbar {
-        width: 550px;
+        width: 555px;
     }
 
     article {
@@ -835,7 +831,7 @@ main {
 
     /* Reused Style */
     .sidebar, article, .navbar {
-        width: 738px;
+        width: 743px;
     }
 
     /* PORTFOLIO PAGE */
@@ -905,7 +901,7 @@ main {
 
     /* Reused Style */
     .sidebar, article, .navbar {
-        width: 994px;
+        width: 999px;
     }
 
     main {
@@ -1079,5 +1075,113 @@ main {
 
     .modal-item video {
         height: 230px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 100px) {
+    .modal-text {
+        font-size: 12px;
+    }
+
+    .modal-img-list {
+        height: 100px;
+    }
+
+    .modal-item img {
+        height: 75px;
+    }
+
+    .modal-item video {
+        height: 75px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 300px) {
+    .modal-text {
+        font-size: 12px;
+    }
+
+    .modal-img-list {
+        height: 100px;
+    }
+
+    .modal-item img {
+        height: 75px;
+    }
+
+    .modal-item video {
+        height: 75px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 500px) {
+    .modal-text {
+        font-size: 12px;
+    }
+
+    .modal-img-list {
+        height: 120px;
+    }
+
+    .modal-item img {
+        height: 95px;
+    }
+
+    .modal-item video {
+        height: 95px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 700px) {
+    .modal-text {
+        font-size: 12px;
+    }
+
+    .modal-img-list {
+        height: 140px;
+    }
+
+    .modal-item img {
+        height: 115px;
+    }
+
+    .modal-item video {
+        height: 115px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 900px) {
+    .modal-text {
+        font-size: 12px;
+    }
+
+    .modal-img-list {
+        height: 160px;
+    }
+
+    .modal-item img {
+        height: 135px;
+    }
+
+    .modal-item video {
+        height: 135px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1100px) {
+    .modal-text {
+        font-size: 12px;
+    }
+
+    .modal-img-list {
+        height: 200px;
+    }
+
+    .modal-item img {
+        height: 175px;
+    }
+
+    .modal-item video {
+        height: 175px;
     }
 }
