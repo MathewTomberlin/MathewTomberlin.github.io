@@ -152,12 +152,12 @@ body { background: var(--smoky-black); }
 }
 
 .modal-item img {
-    height: 92px;
+    height: 108px;
 }
 
 .modal-item video {
     width: auto;
-    height: 92px;
+    height: 108px;
     display: flex;
 }
 
@@ -1042,11 +1042,11 @@ main {
     }
 
     .modal-item img {
-        height: 90px;
+        height: 110px;
     }
 
     .modal-item video {
-        height: 90px;
+        height: 110px;
     }
 }
 
@@ -1056,15 +1056,15 @@ main {
     }
 
     .modal-img-list {
-        height: 136px;
+        height: 150px;
     }
 
     .modal-item img {
-        height: 114px;
+        height: 144px;
     }
 
     .modal-item video {
-        height: 114px;
+        height: 144px;
     }
 }
 
@@ -1074,15 +1074,15 @@ main {
     }
 
     .modal-img-list {
-        height: 177px;
+        height: 190px;
     }
 
     .modal-item img {
-        height: 155px;
+        height: 184px;
     }
 
     .modal-item video {
-        height: 155px;
+        height: 184px;
     }
 }
 
@@ -1096,10 +1096,10 @@ main {
     }
 
     .modal-item img {
-        height: 180px;
+        height: 196px;
     }
 
     .modal-item video {
-        height: 180px;
+        height: 196px;
     }
 }
