@@ -84,6 +84,29 @@
   #RESET
 \*-----------------------------------*/
 
+/*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 12px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+}*/
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -138,6 +161,7 @@ body { background: var(--smoky-black); }
     border: 2px solid rgb(0,0,0);
     height: 114px;
     width: 90%;
+    -webkit-overflow-scrolling: auto;
 }
 
 .modal-item {
