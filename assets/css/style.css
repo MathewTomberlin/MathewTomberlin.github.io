@@ -220,7 +220,7 @@ article {
 
 article.active {
   display: block;
-  animation: fade 0.5s ease backwards;
+/*  animation: fade 0.5s ease backwards;*/
 }
 
 @keyframes fade {
@@ -413,7 +413,6 @@ main {
   border-radius: 0 0 25px 25px;
   border: 1px outset rgb(255,200,0);
   border-top-width:0;
-  z-index: 5;
   transition: var(--transition-1);
   animation: fade 0.5s ease backwards;
 }
@@ -570,7 +569,6 @@ main {
     box-shadow: var(--shadow-5);
     transform: scale(1.2);
     opacity: 0;
-    transition: var(--transition-1);
     z-index: 2;
     max-width: 350px;
     width: 90%;

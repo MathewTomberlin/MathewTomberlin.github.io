@@ -24,60 +24,79 @@ const eyeItem = document.querySelectorAll(".project-item-icon-box");
 const toggleModalShown = function () {
     modalContainer.classList.toggle("active");
     overlay.classList.toggle("active");
+    if (!modalContainer.classList.contains('active')){
+        sessionStorage.removeItem("project");
+    }
 }
+
+const loadModal = function (i) {
+    var item = portfolioItem[i];
+
+    modalLink1.href = "";
+    modalLink2.href = "";
+    modalLink1.innerHTML = "";
+    modalLink2.innerHTML = "";
+
+    // Clear old images in modal
+    let nodes = modalImgList.childNodes;
+    while (nodes.length > 0) {
+        let node = nodes[0];
+        node.remove();
+    }
+
+    //Add images for this portfolio item
+    let projectImages = item.querySelectorAll("[data-project-img]");
+    for (let projImg of projectImages) {
+        let item = modalImgList.appendChild(document.createElement('li'));
+        item.className = "modal-item";
+        let img = item.appendChild(document.createElement('img'));
+        img.src = projImg.src;
+        img.alt = projImg.alt;
+        img.className = "modal-img";
+    }
+
+    //Add videos for this portfolio item
+    let projectVideos = item.querySelectorAll("[data-project-video]");
+    for (let projVid of projectVideos) {
+        let item = modalImgList.appendChild(document.createElement('li'));
+        item.className = "modal-item";
+        let vid = item.appendChild(document.createElement('video'));
+        vid.controls = true;
+        let source = vid.appendChild(document.createElement('source'));
+        let vidSrc = projVid.querySelector("source");
+        source.src = vidSrc.src;
+        source.type = vidSrc.type;
+    }
+
+    //Update link1 and link2
+    modalTitle.innerHTML = item.querySelector("[data-project-title]").innerHTML;
+    modalText.innerHTML = item.querySelector("[data-project-text]").innerHTML;
+    if (item.querySelector("[data-project-link1]") != null) {
+        modalLink1.href = item.querySelector("[data-project-link1]").href;
+        modalLink1.innerHTML = item.querySelector("[data-project-link1]").innerHTML;
+    }
+
+    if (item.querySelector("[data-project-link2]") != null) {
+        modalLink2.href = item.querySelector("[data-project-link2]").href;
+        modalLink2.innerHTML = item.querySelector("[data-project-link2]").innerHTML;
+    }
+
+    toggleModalShown();
+};
 
 // add click event to all modal items
 for (let i = 0; i < portfolioItem.length; i++) {
     portfolioItem[i].addEventListener("click", function () {
-        modalLink1.href = "";
-        modalLink2.href = "";
-        modalLink1.innerHTML = "";
-        modalLink2.innerHTML = "";
-
-        // Clear old images in modal
-        let nodes = modalImgList.childNodes;
-        while (nodes.length > 0) {
-            let node = nodes[0];
-            node.remove();
+        var projNameEl = this.querySelector("[data-project-title]");
+        var projName = null;
+        if (projNameEl !== null) {
+            projName = projNameEl.textContent;
         }
 
-        //Add images for this portfolio item
-        let projectImages = this.querySelectorAll("[data-project-img]");
-        for (let projImg of projectImages) {
-            let item = modalImgList.appendChild(document.createElement('li'));
-            item.className = "modal-item";
-            let img = item.appendChild(document.createElement('img'));
-            img.src = projImg.src;
-            img.alt = projImg.alt;
-            img.className = "modal-img";
+        if (projName !== null) {
+            loadModal(i);
+            sessionStorage.setItem("project", projName);
         }
-
-        //Add videos for this portfolio item
-        let projectVideos = this.querySelectorAll("[data-project-video]");
-        for (let projVid of projectVideos) {
-            let item = modalImgList.appendChild(document.createElement('li'));
-            item.className = "modal-item";
-            let vid = item.appendChild(document.createElement('video'));
-            vid.controls = true;
-            let source = vid.appendChild(document.createElement('source'));
-            let vidSrc = projVid.querySelector("source");
-            source.src = vidSrc.src;
-            source.type = vidSrc.type;
-        }
-
-        //Update link1 and link2
-        modalTitle.innerHTML = this.querySelector("[data-project-title]").innerHTML;
-        modalText.innerHTML = this.querySelector("[data-project-text]").innerHTML;
-        if (this.querySelector("[data-project-link1]") != null) {
-            modalLink1.href = this.querySelector("[data-project-link1]").href;
-            modalLink1.innerHTML = this.querySelector("[data-project-link1]").innerHTML;
-        }
-
-        if (this.querySelector("[data-project-link2]") != null) {
-            modalLink2.href = this.querySelector("[data-project-link2]").href;
-            modalLink2.innerHTML = this.querySelector("[data-project-link2]").innerHTML;
-        }
-        toggleModalShown();
     });
 
 }
@@ -148,24 +167,57 @@ const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+    navigationLinks[i].addEventListener("click", function () {
+    let loaded = "";
     for (let i = 0; i < pages.length; i++) {
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
-        sessionStorage.setItem("page", pages[i].dataset.page);
+        loaded = this.innerHTML.toLowerCase();
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
     }
-
+    if (loaded !== "") {
+        sessionStorage.setItem("page", pages[i].dataset.page);
+    }
   });
 }
 
-if (localStorage.getItem("page") === pages[i].dataset.page) {
-    pages[i].classList.add("active");
-    navigationLinks[i].classList.add("active");
-    window.scrollTo(0, 0);
-}
+window.onload = function () {
+    for (let i = 0; i < pages.length; i++) {
+        if (sessionStorage.getItem("page") === pages[i].dataset.page) {
+            pages[i].classList.add("active");
+            navigationLinks[i].classList.add("active");
+            window.scrollTo(0, 0);
+        } else {
+            pages[i].classList.remove("active");
+            navigationLinks[i].classList.remove("active");
+        }
+    }
+    var proj = sessionStorage.getItem("project");
+    if (proj !== null) {
+        for (let i = 0; i < portfolioItem.length; i++) {
+            var projNameEl = portfolioItem[i].querySelector("[data-project-title]");
+            if (projNameEl !== null) {
+                var projName = projNameEl.textContent;
+                if (proj === projName) {
+                    loadModal(i);
+                }
+            }
+        }
+    }
+};
+
+window.addEventListener("beforeunload", () => {
+    sessionStorage.setItem("scrollPosition", window.scrollY);
+});
+
+window.addEventListener("load", () => {
+    const scrollPosition = sessionStorage.getItem("scrollPosition");
+    if (scrollPosition !== null) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+    }
+});
