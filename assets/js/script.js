@@ -3,8 +3,6 @@
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-// testimonials variables
-//const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const portfolioItem = document.querySelectorAll("[data-portfolio-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
@@ -12,6 +10,8 @@ const overlay = document.querySelector("[data-overlay]");
 
 // modal variable
 const modalImgList = document.querySelector("[data-modal-img-list]");
+const modalImgListArrowL = document.querySelector("[data-modal-img-list-arrow-l]");
+const modalImgListArrowR = document.querySelector("[data-modal-img-list-arrow-r]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 const modalLink1 = document.querySelector("[data-modal-link1]");
@@ -39,9 +39,11 @@ const loadModal = function (i) {
 
     // Clear old images in modal
     let nodes = modalImgList.childNodes;
-    while (nodes.length > 0) {
-        let node = nodes[0];
-        node.remove();
+    for (let nodeIndex = 1; nodeIndex < nodes.length; nodeIndex++) {
+        let node = nodes[nodeIndex];
+        if (node.nodeName == "IMG") {
+            node.remove();
+        }
     }
 
     //Add images for this portfolio item
@@ -223,5 +225,21 @@ window.addEventListener("load", () => {
     const scrollPosition = sessionStorage.getItem("scrollPosition");
     if (scrollPosition !== null) {
         window.scrollTo(0, parseInt(scrollPosition, 10));
+    }
+});
+
+modalImgList.addEventListener("scroll", (event) => {
+    const barLength = modalImgList.scrollWidth - modalImgList.clientWidth;
+    if (event.target.scrollLeft <= 0) {
+        modalImgListArrowR.classList.remove('active');
+    } else {
+        modalImgListArrowR.classList.add('active');
+    }
+
+    console.log(event.target.scrollLeft + barLength);
+    if (event.target.scrollLeft + barLength >= modalImgList.scrollWidth-35) {
+        modalImgListArrowL.classList.remove('active');
+    } else {
+        modalImgListArrowL.classList.add('active');
     }
 });

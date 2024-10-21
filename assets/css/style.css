@@ -70,7 +70,7 @@
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
     --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-    --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+    --shadow-5: -4px 24px 80px hsla(0, 0%, 0%, 1);
     /**
    * transition
    */
@@ -84,28 +84,69 @@
   #RESET
 \*-----------------------------------*/
 
-/*::-webkit-scrollbar {
+.modal-img-list::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
-::-webkit-scrollbar:vertical {
-    width: 12px;
+.modal-img-list::-webkit-scrollbar:vertical {
+    width:0px;
 }
 
-::-webkit-scrollbar:horizontal {
-    height: 12px;
+.modal-img-list::-webkit-scrollbar:horizontal {
+    height: 20px;
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.5);
+.modal-img-list::-webkit-scrollbar-thumb {
+    background-color: #ff8800;
     border-radius: 10px;
-    border: 2px solid #ffffff;
+    border: 3px solid rgb(0,0,0);
 }
 
-::-webkit-scrollbar-track {
+.modal-img-list::-webkit-scrollbar-track {
+    background-color:#555555;
+    opacity:0.25;
     border-radius: 10px;
-    background-color: #ffffff;
-}*/
+}
+
+.modal-img-list::-webkit-scrollbar-button {
+    display: none;
+}
+
+.modal-img-list::-webkit-scrollbar-corner {
+    display: none;
+}
+
+modal-img-scroller {
+    width: max-content;
+    position: relative;
+    height: 100%;
+}
+
+.modal-arrow {
+    position: absolute;
+    top: 75px;
+    font-size: 125px;
+    color: rgb(255,225,0);
+    opacity: 0.2;
+    transform: scale(1,2);
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgba(0,0,0,1);
+    pointer-events: none;
+}
+
+.modal-arrow.active {
+    opacity: 1;
+}
+
+.right-arrow {
+    right: 10px;
+    text-shadow: -8px 1px 3px rgba(0,0,0,0.8);
+}
+
+.left-arrow {
+    left: 10px;
+    text-shadow: 8px 1px 3px rgba(0,0,0,1);
+}
 
 *, *::before, *::after {
   margin: 0;
@@ -156,32 +197,28 @@ body { background: var(--smoky-black); }
 
 .modal-img-list {
     display: flex;
-    overflow-x: scroll;
+    overflow-x:scroll;
     scroll-behavior: smooth;
-    border: 2px solid rgb(0,0,0);
-    height: 114px;
-    width: 90%;
-    -webkit-overflow-scrolling: auto;
+    /*border: 2px solid rgb(0,0,0);*/
+    height: 200px;
+    width: 100%;
 }
 
-.modal-item {
-    border: 2px solid rgb(0,0,0);
-    margin: auto;
+.no-select {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 .modal-item img {
-    height: 108px;
+    height: 180px;
 }
 
 .modal-item video {
     width: auto;
-    height: 108px;
+    height: 190px;
     display: flex;
 }
 
@@ -189,14 +226,8 @@ body { background: var(--smoky-black); }
     border: 2px solid rgb(0,0,0);
 }
 
-.clients-item, .info-avatar, .name {
+.avatar, .name {
     align-self: start;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .clients-item img {
@@ -310,7 +341,7 @@ main {
   margin-inline:auto;
 }
 
-.info-avatar img{
+.avatar img{
   border-radius: 10px;
   width: 125px;
   margin: 10px;
@@ -1060,15 +1091,15 @@ main {
     }
 
     .modal-img-list {
-        height: 116px;
+        height: 200px;
     }
 
     .modal-item img {
-        height: 110px;
+        height: 194px;
     }
 
     .modal-item video {
-        height: 110px;
+        height: 194px;
     }
 }
 
@@ -1078,15 +1109,15 @@ main {
     }
 
     .modal-img-list {
-        height: 150px;
+        height: 214px;
     }
 
     .modal-item img {
-        height: 144px;
+        height: 208px;
     }
 
     .modal-item video {
-        height: 144px;
+        height: 208px;
     }
 }
 
@@ -1096,15 +1127,15 @@ main {
     }
 
     .modal-img-list {
-        height: 190px;
+        height: 244px;
     }
 
     .modal-item img {
-        height: 184px;
+        height: 238px;
     }
 
     .modal-item video {
-        height: 184px;
+        height: 238px;
     }
 }
 
@@ -1114,14 +1145,14 @@ main {
     }
 
     .modal-img-list {
-        height: 202px;
+        height: 256px;
     }
 
     .modal-item img {
-        height: 196px;
+        height: 250px;
     }
 
     .modal-item video {
-        height: 196px;
+        height: 250px;
     }
 }
