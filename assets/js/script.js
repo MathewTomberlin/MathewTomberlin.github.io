@@ -41,9 +41,7 @@ const loadModal = function (i) {
     let nodes = modalImgList.childNodes;
     for (let nodeIndex = 1; nodeIndex < nodes.length; nodeIndex++) {
         let node = nodes[nodeIndex];
-        if (node.nodeName == "IMG") {
-            node.remove();
-        }
+        node.remove();
     }
 
     //Add images for this portfolio item
