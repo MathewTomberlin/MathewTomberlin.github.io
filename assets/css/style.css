@@ -470,6 +470,7 @@ main {
   border-top-width:0;
   transition: var(--transition-1);
   animation: fade 0.5s ease backwards;
+  z-index:100;
 }
 
 .navbar-list {
