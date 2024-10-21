@@ -39,7 +39,7 @@ const loadModal = function (i) {
 
     // Clear old images in modal
     let nodes = modalImgList.childNodes;
-    for (let nodeIndex = 1; nodeIndex < nodes.length; nodeIndex++) {
+    for (let nodeIndex = 0; nodeIndex < nodes.length; nodeIndex++) {
         let node = nodes[nodeIndex];
         node.remove();
     }
