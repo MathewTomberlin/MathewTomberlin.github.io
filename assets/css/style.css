@@ -124,7 +124,7 @@ modal-img-scroller {
 
 .modal-arrow {
     position: absolute;
-    top: 75px;
+    top: 70px;
     font-size: 125px;
     color: rgb(255,225,0);
     opacity: 0.2;
@@ -197,7 +197,7 @@ body { background: var(--smoky-black); }
 
 .modal-img-list {
     display: flex;
-    overflow-x:scroll;
+    overflow-x:auto;
     scroll-behavior: smooth;
     /*border: 2px solid rgb(0,0,0);*/
     height: 200px;
@@ -1119,6 +1119,10 @@ main {
     .modal-item video {
         height: 208px;
     }
+
+    .modal-arrow {
+        top:75px;
+    }
 }
 
 @media (orientation: landscape) and (min-width: 768px) {
@@ -1137,6 +1141,10 @@ main {
     .modal-item video {
         height: 238px;
     }
+
+    .modal-arrow {
+        top: 90px;
+    }
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
@@ -1154,5 +1162,9 @@ main {
 
     .modal-item video {
         height: 250px;
+    }
+
+    .modal-arrow {
+        top:100px;
     }
 }

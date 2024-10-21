@@ -27,6 +27,7 @@ const toggleModalShown = function () {
     if (!modalContainer.classList.contains('active')){
         sessionStorage.removeItem("project");
     }
+    setTimeout(setupScroll, 10);
 }
 
 const loadModal = function (i) {
@@ -226,18 +227,41 @@ window.addEventListener("load", () => {
     }
 });
 
+window.addEventListener("resize", () => {
+    updateScrollArrows();
+});
+
 modalImgList.addEventListener("scroll", (event) => {
-    const barLength = modalImgList.scrollWidth - modalImgList.clientWidth;
-    if (event.target.scrollLeft <= 0) {
+    updateScrollArrows();
+});
+
+function setupScroll() {
+    const scrollLength = modalImgList.clientWidth - modalImgList.scrollWidth;
+    if (scrollLength >= 0) {
         modalImgListArrowR.classList.remove('active');
     } else {
         modalImgListArrowR.classList.add('active');
     }
+}
 
-    console.log(event.target.scrollLeft + barLength);
-    if (event.target.scrollLeft + barLength >= modalImgList.scrollWidth-35) {
+function updateScrollArrows() {
+    const barPos = modalImgList.scrollLeft;
+    const scrollLength = modalImgList.clientWidth - modalImgList.scrollWidth;
+    const scrollAmount = Math.abs(barPos / scrollLength);
+    if (scrollLength >= 0) {
         modalImgListArrowL.classList.remove('active');
+        modalImgListArrowR.classList.remove('active');
     } else {
-        modalImgListArrowL.classList.add('active');
+        if (scrollAmount >= 0.95) {
+            modalImgListArrowR.classList.remove('active');
+        } else {
+            modalImgListArrowR.classList.add('active');
+        }
+
+        if (scrollAmount <= 0) {
+            modalImgListArrowL.classList.remove('active');
+        } else {
+            modalImgListArrowL.classList.add('active');
+        }
     }
-});
+}
