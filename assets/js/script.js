@@ -45,17 +45,6 @@ const loadModal = function (i) {
         node.remove();
     }
 
-    //Add images for this portfolio item
-    let projectImages = item.querySelectorAll("[data-project-img]");
-    for (let projImg of projectImages) {
-        let item = modalImgList.appendChild(document.createElement('li'));
-        item.className = "modal-item";
-        let img = item.appendChild(document.createElement('img'));
-        img.src = projImg.src;
-        img.alt = projImg.alt;
-        img.className = "modal-img";
-    }
-
     //Add videos for this portfolio item
     let projectVideos = item.querySelectorAll("[data-project-video]");
     for (let projVid of projectVideos) {
@@ -67,6 +56,17 @@ const loadModal = function (i) {
         let vidSrc = projVid.querySelector("source");
         source.src = vidSrc.src;
         source.type = vidSrc.type;
+    }
+
+    //Add images for this portfolio item
+    let projectImages = item.querySelectorAll("[data-project-img]");
+    for (let projImg of projectImages) {
+        let item = modalImgList.appendChild(document.createElement('li'));
+        item.className = "modal-item";
+        let img = item.appendChild(document.createElement('img'));
+        img.src = projImg.src;
+        img.alt = projImg.alt;
+        img.className = "modal-img";
     }
 
     //Update link1 and link2
@@ -82,6 +82,7 @@ const loadModal = function (i) {
         modalLink2.innerHTML = item.querySelector("[data-project-link2]").innerHTML;
     }
 
+    modalImgList.scrollTo(0, 0);
     toggleModalShown();
 };
 
