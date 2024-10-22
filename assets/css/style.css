@@ -364,21 +364,30 @@ main {
 }
 
 .contact-info {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: var(--fw-600);
   line-height: 1;
   color:deepskyblue;
+}
+
+.contact-info.resume {
+  font-size:16px;
+  color:chartreuse;
 }
 
 .contact-info:hover {
   color: rgb(100,255,255);
 }
 
+.contact-info.resume:hover {
+  color: rgb(200,255,200);
+}
+
 .social-list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px 0px;
+  padding: 5px 0px;
   gap:7px;
 }
 
