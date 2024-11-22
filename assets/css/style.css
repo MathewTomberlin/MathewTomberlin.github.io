@@ -357,6 +357,10 @@ main {
   border: 3px solid rgb(30,30,30);
 }
 
+.info-content {
+    justify-items: center;
+}
+
 .info-content .name {
   color: var(--white-2);
   font-weight: var(--fw-600);
@@ -373,15 +377,24 @@ main {
 }
 
 .contact-info {
-  font-size: 12px;
-  font-weight: var(--fw-600);
-  line-height: 1;
-  color:deepskyblue;
+    font-size: 12px;
+    font-weight: var(--fw-600);
+    line-height: 1;
+    color: deepskyblue;
+    align-items: center;
 }
 
 .contact-info.resume {
   font-size:16px;
   color:chartreuse;
+}
+
+.contact-info.link {
+  color: aquamarine;
+}
+
+.contact-info.link:hover {
+  color: rgb(190,255,255);
 }
 
 .contact-info:hover {
