@@ -46,9 +46,6 @@
                     <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>Portfolio</button>
                     </li>
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>History</button>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -106,8 +103,9 @@
             <!-- #ABOUT -->
             <article class="about active" data-page="about">
                 <section class="body-text">
-                    Mat is a Software Engineer and Technical Artist with 8 years experience in VR games and cloud enterprise applications.
-                    He's a Marine Corps Intelligence veteran who takes initiative mentoring peers and solving technical challenges.
+                    <b>Hi! I’m Mat</b> — a Marine Corps veteran turned <b>software engineer specializing in VR, graphics, and agentic AI</b>. Over 8+ years, 
+                    I’ve shipped everything from enterprise SaaS at Boeing, to award-winning VR training at HaptX, and most recently authored a 
+                    modular C++ OpenGL engine and lightweight LangChain agent framework.
                 </section>
 
                 <!-- service -->
@@ -120,8 +118,8 @@
                             <div class="service-content-box">
                                 <h4 class="h5 service-item-title">Cloud Enterprise Engineer</h4>
                                 <p class="service-item-text">
-                                    Frontend development in React and TypeScript.<br />
-                                    Backend development in Java with Spring and SQL
+                                    React, TypeScript, Java, API<br><br>
+                                    Feature maintenance and modernization of enterprise SaaS platforms
                                 </p>
                             </div>
                         </li>
@@ -131,9 +129,10 @@
                                 <ion-icon name="construct-outline" style="font-size:40px;color:rgb(240,205,100);"></ion-icon>
                             </div>
                             <div class="service-content-box">
-                                <h4 class="h5 service-item-title">VR/AR Engineer</h4>
+                                <h4 class="h5 service-item-title">AI Agent Engineer</h4>
                                 <p class="service-item-text">
-                                    Builds VR gaming and training experiences and autonomous application systems
+                                    LangChain, OpenAI, RAG, Model Context Protocol (MCP) <br><br>
+                                    Builds intelligent agentic AI systems for image generation, data analysis, and more
                                 </p>
                             </div>
                         </li>
@@ -145,8 +144,8 @@
                             <div class="service-content-box">
                                 <h4 class="h5 service-item-title">Game Developer</h4>
                                 <p class="service-item-text">
-                                    Develops gameplay systems for VR, PC, and mobile using UE5, Unity,
-                                    C++, C#, Blueprints, and OpenGL
+                                    Unreal Engine, Unity, C++, C#, OpenGL<br><br>
+                                    Built haptic training demos, PC and mobile games, and rendering and scripting engines
                                 </p>
                             </div>
                         </li>
@@ -158,7 +157,8 @@
                             <div class="service-content-box">
                                 <h4 class="h5 service-item-title">Artist and Animator</h4>
                                 <p class="service-item-text">
-                                    Models, rigs and animates 3D characters, props, and environments with Blender
+                                    Blender, Photoshop, Unreal Engine, Unity<br><br>
+                                    Models, rigs and animates 3D characters, props, and environments
                                 </p>
                             </div>
                         </li>
@@ -175,6 +175,47 @@
 
                 <section class="projects">
                     <ul class="project-list">
+                        <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/SwarmAgent_Example.PNG" alt="CG Engine" loading="lazy" data-project-img>
+                                    <video class="project-detail-img" data-project-video>
+                                        <source src="assets/images/SwarmAgent.mp4" type="video/mp4">
+                                    </video>
+                                </figure>
+                                <h3 class="project-title" data-project-title>Image Generation Agent AI</h3>
+                                <p class="project-text" data-project-text>
+                                    I wrote a React application that accesses a FastAPI Model Context Protocol (MCP) server and LangChain to access a local
+                                    SwarmUI instance and generate images using settings provided by natural language user input via agentic AI. The agent
+                                    is capable of understanding the user's intent and generating images that match the user's desired style and content, and
+                                    retains the ability to respond to queries as a generalist LLM.
+                                </p>
+                                <p class="project-category">Agentic AI</p>
+                            </a>
+                        </li>
+                        <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/CGEngine_Example.PNG" alt="CG Engine" loading="lazy" data-project-img>
+                                    <img src="./assets/images/CGEngine_Example2.PNG" alt="CG Engine" loading="lazy" class="project-detail-img" data-project-img>
+                                    <img src="./assets/images/CGEngine_Example3.PNG" alt="CG Engine" loading="lazy" class="project-detail-img" data-project-img>
+                                    <img src="./assets/images/CGEngine_Example4.PNG" alt="CG Engine" loading="lazy" class="project-detail-img" data-project-img>
+                                </figure>
+                                <h3 class="project-title" data-project-title>CG Engine</h3>
+                                <p class="project-text" data-project-text>
+                                    CG Engine is an open source, real-time rendering engine written in C++ and OpenGL with a built-in Python interpreter and scripting engine.
+                                    The system includes the ability to import 3D models, including rigged and animated characters, as well as materials and textures.
+                                    The engine is designed to be a learning tool for students and a research platform for developers.
+                                </p>
+                                <p class="project-category">Desktop</p>
+                            </a>
+                        </li>
                         <li class="project-item  active" data-filter-item data-category="Game Development" data-portfolio-item>
                             <a href="#">
                                 <figure class="project-img">
