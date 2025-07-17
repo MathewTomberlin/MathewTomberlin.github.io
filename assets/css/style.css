@@ -235,7 +235,7 @@ body { background: var(--smoky-black); }
     border: 2px solid rgb(0,0,0);
 }
 
-.avatar, .name {
+.name {
     align-self: start;
 }
 
@@ -382,6 +382,13 @@ main {
     line-height: 1;
     color: deepskyblue;
     align-items: center;
+}
+
+.portfolio-heading {
+    display: flex;
+    justify-content: center;
+    color: rgb(255,200,0);
+    font-size: 23px;
 }
 
 .contact-info.resume {
@@ -596,7 +603,7 @@ main {
 }
 
 .service-item-title {
-  color:white;
+  color:rgb(255,200,0);
   font-size: 16px;
   font-weight: var(--fw-600);
   line-height: 1;
